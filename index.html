@@ -1220,7 +1220,9 @@
                     happens.</p>
 
                 <div class="cta-row">
-                    <a class="btn" href="CardioFlush/" rel="sponsored nofollow noopener">See the advertiser's official
+                    <a class="btn" id="offer-cta"
+                        href="https://cc.cardioflush.com/v2/?campaignkey=pg-cyb&amp;hid=b2lkPW9mZl82ODEwNzA3JmFpZD1hZmY3MTUwODA3JnVpZD1ibF81NjU3MDU1&amp;affid=aff7150807&amp;sub1={clickid}"
+                        rel="sponsored nofollow noopener" target="_blank">See the advertiser's official
                         presentation</a>
                     <span class="note-tiny">Advertiser link. We may earn a commission if you purchase, at no additional
                         cost to you. We are not the seller: pricing, payment, shipping, guarantees and refunds are
@@ -1543,6 +1545,32 @@
             var y = new Date().getFullYear();
             $('yr').textContent = y;
             $('upd').textContent = y;
+        })();
+    </script>
+
+    <script>
+        // Injeta o clickid real no CTA da oferta (sub1={clickid}); le do parent quando em iframe.
+        (function () {
+            var search = '';
+            try { search = window.location.search || ''; } catch (e) { }
+            try {
+                if ((!search || search.length < 2) && window.parent && window.parent !== window
+                    && window.parent.location && window.parent.location.search) {
+                    search = window.parent.location.search;
+                }
+            } catch (e) { }
+            var params = new URLSearchParams(search);
+            var keys = ['clickid', 'rtkclickid', 'cid', 'sub1', 'sub_id', 's1'];
+            var clickid = '';
+            for (var i = 0; i < keys.length; i++) {
+                var v = params.get(keys[i]);
+                if (v) { clickid = v; break; }
+            }
+            var cta = document.getElementById('offer-cta');
+            if (cta) {
+                var raw = cta.getAttribute('href') || '';
+                cta.setAttribute('href', raw.replace(/\{clickid\}/g, encodeURIComponent(clickid)));
+            }
         })();
     </script>
 </body>
