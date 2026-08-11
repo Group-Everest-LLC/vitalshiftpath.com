@@ -1,0 +1,3480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>Health</title>
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <!-- Tracking Script (RT dinamico) -->
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var rtkcmpid = params.get('rtkcmpid') || '';
+      var domain = window.location.hostname.replace(/^www\./, '');
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.src = 'https://lp.' + domain + '/pretrack.js' + (rtkcmpid ? '?rtkcmpid=' + rtkcmpid : '');
+      document.head.appendChild(s);
+    })();
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <link rel="preload" href="css/stylesV2.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="css/all.min.css" crossorigin="anonymous">
+  <noscript>
+    <link rel="stylesheet" href="https://cvault.b-cdn.net/stylesV2.css">
+  </noscript>
+  <link rel="preconnect" href="https://cvault.b-cdn.net">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/hls.js@latest" as="script">
+  <script defer="" src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <link rel="preload" href="https://cvault.b-cdn.net/videoPlayer.js" as="script">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+  <style id="site-styles">
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      color: #1d1d1d;
+      background: #ffffff;
+      font-family: Lato, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      box-shadow: none;
+    }
+
+    video,
+    iframe,
+    embed,
+    object {
+      max-width: 100%;
+      border: 0;
+    }
+
+    img.emoji {
+      display: inline !important;
+      width: 1em !important;
+      height: 1em !important;
+      margin: 0 0.07em !important;
+      padding: 0 !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      vertical-align: -0.1em !important;
+      background: none !important;
+    }
+
+    .sales-page,
+    .page-section,
+    .page-section__inner,
+    .content-block {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .adv-fullwidth {
+      position: relative !important;
+      left: 50% !important;
+      right: auto !important;
+      transform: translateX(-50%) !important;
+      width: 100vw !important;
+      max-width: 100vw !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: #fff;
+      overflow: hidden !important;
+      font-family: 'Inter', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .adv-fullwidth .adv-wrap,
+    .adv-fullwidth .adv-wrap * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      max-width: 100%;
+    }
+
+    .adv-fullwidth .adv-topstrip {
+      width: 100vw !important;
+      max-width: 100vw !important;
+      position: relative !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      background: #fff4d6;
+      height: 6px;
+    }
+
+    .adv-fullwidth .adv-navbar {
+      width: 100vw !important;
+      max-width: 100vw !important;
+      position: relative !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      background: #fff;
+      border-bottom: 1px solid #f0f0f0;
+      padding: 12px 0;
+    }
+
+    .adv-fullwidth .adv-navbar-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .adv-fullwidth .adv-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      text-decoration: none;
+    }
+
+    .adv-fullwidth .adv-logo-img {
+      height: 44px;
+      width: auto;
+      display: block;
+      flex-shrink: 0;
+      object-fit: contain;
+    }
+
+    .adv-fullwidth .adv-logo-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      color: #111;
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+
+    .adv-fullwidth .adv-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .adv-fullwidth .adv-nav a {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #111;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+
+    .adv-fullwidth .adv-nav a:hover {
+      color: #c0392b;
+    }
+
+    .adv-fullwidth .adv-nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+
+    .adv-fullwidth .adv-signin {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #f4f4f4;
+      border-radius: 999px;
+      padding: 8px 16px 8px 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #111;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .adv-fullwidth .adv-signin-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1.5px solid #111;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .adv-fullwidth .adv-signin-icon svg {
+      width: 12px;
+      height: 12px;
+      fill: #111;
+    }
+
+    .adv-fullwidth .adv-search,
+    .adv-fullwidth .adv-hamburger {
+      background: none;
+      border: 0;
+      cursor: pointer;
+      padding: 4px;
+      color: #111;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .adv-fullwidth .adv-search svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .adv-fullwidth .adv-hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .adv-fullwidth .adv-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #111;
+      border-radius: 1px;
+    }
+
+    /* ===== ARTICLE BODY —- compacto vertical ===== */
+    .adv-fullwidth .adv-body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 14px 30px 8px 30px;
+      background: #fff;
+    }
+
+    .adv-fullwidth .adv-headline-wrap {
+      border-left: 4px solid #c0392b;
+      padding-left: 16px;
+      margin-bottom: 10px;
+    }
+
+    .adv-fullwidth .adv-headline {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: #000;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+    }
+
+    .adv-fullwidth .adv-headline .hl-red {
+      color: #c0392b;
+    }
+
+    .adv-fullwidth .adv-date {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: #555;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin: 0;
+      padding-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .adv-fullwidth .adv-chevron {
+      font-size: 12px;
+      color: #999;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .adv-fullwidth .adv-author-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-top: 8px;
+    }
+
+    .adv-fullwidth .adv-author-by {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      color: #888;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .adv-fullwidth .adv-author-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #c0392b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .adv-fullwidth .adv-author-initials {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .adv-fullwidth .adv-author-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #111;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+
+    @media (max-width: 1100px) {
+      .adv-fullwidth .adv-nav {
+        display: none;
+      }
+
+      .adv-fullwidth .adv-navbar-inner {
+        padding: 0 16px;
+        gap: 12px;
+      }
+    }
+
+    .nswatch {
+      font-family: 'Poppins', Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: #1d1d1d;
+      text-align: center;
+      padding: 8px 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin: 0 auto;
+      width: fit-content;
+    }
+
+    .nswatch__dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #e30613;
+      animation: nswatchPulse 1.4s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes nswatchPulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.4;
+        transform: scale(0.85);
+      }
+    }
+
+    .nswatch__count {
+      font-weight: 800;
+      color: #e30613;
+    }
+
+    .fbcta {
+      box-sizing: border-box;
+    }
+
+    .fbcta *,
+    .fbcta *::before,
+    .fbcta *::after {
+      box-sizing: border-box;
+    }
+
+    .fbcta {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      color: #000;
+    }
+
+    .fbcta__cta-bg {
+      background: linear-gradient(90deg, #b72922 0%, #b72922 100%);
+      padding: 40px 20px 32px;
+    }
+
+    .fbcta__cta {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .fbcta__cta-title {
+      font-weight: 600;
+      font-size: 28px;
+      color: #fff;
+      line-height: 1.3;
+      margin: 0 0 14px;
+    }
+
+    .fbcta__cta-counter {
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 6px 0;
+    }
+
+    .fbcta__cta-icon {
+      width: 24px;
+      height: 24px;
+      animation: fbctaspin 3s linear infinite;
+    }
+
+    @keyframes fbctaspin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .fbcta__shipping-bg {
+      background: #fff;
+      padding: 24px 20px 40px;
+    }
+
+    .fbcta__shipping {
+      max-width: 710px;
+      margin: 0 auto;
+      background: #fff;
+      border: 2px solid #b72922;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .fbcta__shipping-img {
+      flex-shrink: 0;
+      width: 140px;
+      background: #b72922;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .fbcta__shipping-img::after {
+      content: "";
+      position: absolute;
+      right: -14px;
+      top: 0;
+      width: 0;
+      border-top: 80px solid transparent;
+      border-bottom: 80px solid transparent;
+      border-left: 15px solid #b72922;
+    }
+
+    .fbcta__shipping-img img {
+      width: 80px;
+      height: auto;
+      display: block;
+      filter: brightness(0) invert(1);
+    }
+
+    .fbcta__shipping-text {
+      flex: 1;
+      padding: 18px 24px 18px 30px;
+    }
+
+    .fbcta__shipping-headline {
+      font-weight: 700;
+      font-size: 22px;
+      color: #000;
+      line-height: 1.3;
+      margin: 0 0 8px;
+    }
+
+    .fbcta__shipping-headline .fbcta__yellow {
+      color: #b72922;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+
+    .fbcta__shipping-sub {
+      font-weight: 400;
+      font-size: 13px;
+      color: #555;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .fbcta__cta-bg {
+        padding: 28px 16px 22px;
+      }
+
+      .fbcta__cta-title {
+        font-size: 19px;
+      }
+
+      .fbcta__cta-counter {
+        font-size: 12px;
+      }
+
+      .fbcta__shipping-bg {
+        padding: 16px 16px 28px;
+      }
+
+      .fbcta__shipping-img {
+        width: 86px;
+      }
+
+      .fbcta__shipping-img img {
+        width: 56px;
+      }
+
+      .fbcta__shipping-img::after {
+        border-top-width: 60px;
+        border-bottom-width: 60px;
+      }
+
+      .fbcta__shipping-text {
+        padding: 12px 14px 12px 22px;
+      }
+
+      .fbcta__shipping-headline {
+        font-size: 15px;
+      }
+
+      .fbcta__shipping-sub {
+        font-size: 11px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fbcta__cta-icon {
+        animation: none !important;
+      }
+    }
+
+    .pk {
+      box-sizing: border-box;
+    }
+
+    .pk *,
+    .pk *::before,
+    .pk *::after {
+      box-sizing: border-box;
+    }
+
+    .pk {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+      padding: 40px 16px 50px;
+      background: #fff !important;
+      font-family: 'Poppins', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      color: #1d1d1d;
+    }
+
+    .pk__grid {
+      max-width: 1060px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .pk__item {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      text-align: center;
+      color: #1d1d1d;
+      background: #fff !important;
+      border: 2px solid #b72922 !important;
+      border-radius: 18px;
+      overflow: hidden;
+      transition: .2s;
+    }
+
+    .pk__item:hover {
+      transform: scale(1.02);
+    }
+
+    .pk__wrap {
+      padding: 18px 16px 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .pk__header {
+      background: #b72922 !important;
+      color: #fff !important;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 13px 12px;
+      margin: -18px -16px 14px;
+      text-align: center;
+    }
+
+    .pk__offer {
+      margin: 0 0 12px;
+      line-height: 1.1;
+    }
+
+    .pk__offer b {
+      display: block;
+      font-weight: 800;
+      font-size: 22px;
+    }
+
+    .pk__offer span {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .pk__img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      margin: 0 auto 8px;
+      display: block;
+    }
+
+    .pk__price {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      width: fit-content;
+      margin: 4px auto 14px;
+      line-height: 1;
+    }
+
+    .pk__price b {
+      font-family: Impact, 'Arial Narrow Bold', sans-serif;
+      font-size: 70px;
+      font-weight: 400;
+      letter-spacing: -2px;
+    }
+
+    .pk__price sup {
+      font-size: 0.5em;
+      vertical-align: top;
+    }
+
+    .pk__price span {
+      font-size: 13px;
+      font-weight: 800;
+      text-align: left;
+      line-height: 1.1;
+    }
+
+    .pk__savings {
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    .pk__savings>div {
+      padding: 11px 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.42);
+    }
+
+    .pk__savings>div:first-child {
+      border-top: 1px dashed rgba(0, 0, 0, 0.42);
+    }
+
+    .pk__savings svg {
+      width: 16px;
+      height: 16px;
+      fill: #2ba23c;
+      flex-shrink: 0;
+    }
+
+    .pk__btn {
+      display: block;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff !important;
+      background: linear-gradient(0deg, #1ca11e, #0c9c0e) !important;
+      margin: 16px 4px 12px;
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: .3s;
+      font-family: Impact, 'Arial Narrow Bold', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .pk__btn:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(28, 161, 30, 0.4);
+    }
+
+    .pk__btn span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pk__btn svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+
+    .pk__flags {
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 10px;
+      display: block;
+    }
+
+    .pk__totals {
+      font-size: 15px;
+      margin: 0 0 4px;
+    }
+
+    .pk__totals s {
+      text-decoration-color: red;
+      text-decoration-thickness: 2px;
+      opacity: 0.7;
+    }
+
+    .pk__totals b {
+      font-size: 18px;
+      margin-left: 4px;
+    }
+
+    .pk__shipping {
+      font-weight: 800;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .pk__shipping span {
+      color: #dc3545;
+    }
+
+    /* BEST VALUE —- FUNDO #6e0606 + TEXTO BRANCO */
+    .pk__item.pk--promo {
+      border-color: #6e0606 !important;
+      color: #fff !important;
+    }
+
+    .pk__item.pk--promo .pk__wrap {
+      background: #6e0606 !important;
+
+      border-radius: 16px;
+      color: #fff !important;
+    }
+
+    .pk__item.pk--promo .pk__offer {
+      color: #fff !important;
+    }
+
+    .pk__item.pk--promo .pk__price {
+      color: #fff !important;
+    }
+
+    .pk__item.pk--promo .pk__totals {
+      color: #fff !important;
+    }
+
+    .pk__item.pk--promo .pk__shipping {
+      color: #fff !important;
+    }
+
+    .pk__item.pk--promo .pk__header {
+      background: linear-gradient(90deg, #b72922, #6e0606) !important;
+      color: #fff !important;
+      border-radius: 8px;
+      margin: -2px 0 12px;
+      padding: 8px;
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: none;
+      box-shadow: 0 4px 14px rgba(110, 6, 6, 0.55);
+      border: 2px solid #fff;
+    }
+
+    .pk__item.pk--promo .pk__savings>div {
+      color: #fff !important;
+      border-bottom-color: rgba(255, 255, 255, 0.35) !important;
+    }
+
+    .pk__item.pk--promo .pk__savings>div:first-child {
+      border-top-color: rgba(255, 255, 255, 0.35) !important;
+    }
+
+    .pk__item.pk--promo .pk__savings svg {
+      fill: #4dd964 !important;
+    }
+
+    .pk__item.pk--promo .pk__shipping span {
+      color: #ffd814 !important;
+    }
+
+    .pk__item.pk--promo .pk__totals s {
+      text-decoration-color: #ffd814 !important;
+      opacity: 0.85;
+    }
+
+    @media (max-width: 768px) {
+      .pk {
+        padding: 28px 14px 36px;
+      }
+
+      .pk__grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 400px;
+      }
+
+      .pk__price b {
+        font-size: 64px;
+      }
+
+      .pk__item:nth-child(1) {
+        order: 2;
+      }
+
+      .pk__item:nth-child(2) {
+        order: 1;
+      }
+
+      .pk__item:nth-child(3) {
+        order: 3;
+      }
+    }
+
+    .ns1 {
+      box-sizing: border-box;
+    }
+
+    .ns1 *,
+    .ns1 *::before,
+    .ns1 *::after {
+      box-sizing: border-box;
+    }
+
+    .ns1 {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      color: #000;
+    }
+
+    .ns1__guarantee-bg {
+      background: linear-gradient(135deg, #b72922 0%, #b72922 100%);
+      padding: 50px 20px 60px;
+    }
+
+    .ns1__guarantee {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    .ns1__guarantee-img {
+      flex-shrink: 0;
+      width: 200px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 30px;
+    }
+
+    .ns1__guarantee-img img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      display: block;
+    }
+
+    .ns1__guarantee-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .ns1__guarantee-title-white {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.2;
+      color: #fff;
+      margin: 0 0 6px;
+    }
+
+    .ns1__guarantee-title-red {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.2;
+      color: #fff;
+      margin: 0 0 18px;
+    }
+
+    .ns1__guarantee-body {
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 1.55;
+      color: #fff;
+    }
+
+    .ns1__guarantee-body p {
+      margin: 0 0 12px;
+    }
+
+    .ns1__guarantee-body a {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .ns1__badges {
+      margin-top: 22px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .ns1__badges img {
+      height: 70px;
+      width: auto;
+      display: block;
+    }
+
+    .ns1__shipping-bg {
+      background: #b72922;
+      padding: 24px 20px;
+      overflow: hidden;
+    }
+
+    .ns1__shipping {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .ns1__shipping-truck {
+      flex-shrink: 0;
+    }
+
+    .ns1__shipping-truck img {
+      width: 100px;
+      height: auto;
+      display: block;
+      filter: brightness(0) invert(1);
+    }
+
+    .ns1__shipping-text {
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .ns1__reviews-bg {
+      background: #fff;
+      padding: 50px 20px 30px;
+    }
+
+    .ns1__reviews {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .ns1__reviews-title {
+      font-weight: 700;
+      font-size: 30px;
+      text-align: center;
+      color: #b72922;
+      margin: 0 0 10px;
+      line-height: 1.25;
+    }
+
+    .ns1__reviews-subtitle {
+      font-weight: 700;
+      font-size: 22px;
+      text-align: center;
+      color: #1a1a1a;
+      margin: 0 0 28px;
+    }
+
+    .ns1__reviews-label {
+      font-weight: 700;
+      font-size: 14px;
+      color: #000;
+      margin: 0 0 12px;
+    }
+
+    .ns1__review {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 20px 0 22px;
+    }
+
+    .ns1__review:last-child {
+      border-bottom: none;
+    }
+
+    .ns1__rv-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+
+    .ns1__rv-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #e5e5e5;
+      flex-shrink: 0;
+    }
+
+    .ns1__rv-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .ns1__rv-name {
+      font-weight: 700;
+      font-size: 14px;
+      color: #000;
+    }
+
+    .ns1__rv-loc {
+      font-weight: 400;
+      font-size: 13px;
+      color: #777;
+    }
+
+    .ns1__rv-stars {
+      display: inline-flex;
+      gap: 2px;
+      margin: 2px 0 4px;
+    }
+
+    .ns1__rv-stars svg {
+      width: 15px;
+      height: 15px;
+      fill: #f5a623;
+    }
+
+    .ns1__rv-purchased {
+      font-weight: 700;
+      font-size: 12px;
+      color: #b72922;
+      margin: 0 0 8px;
+    }
+
+    .ns1__rv-body {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.55;
+      color: #555;
+      margin: 0 0 10px;
+    }
+
+    .ns1__rv-helpful {
+      font-size: 13px;
+      color: #888;
+      margin: 0 0 6px;
+    }
+
+    .ns1__rv-actions {
+      display: flex;
+      gap: 16px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #777;
+    }
+
+    .ns1__cta-bg {
+      background: linear-gradient(90deg, #b72922 0%, #b72922 100%);
+      padding: 40px 20px 32px;
+    }
+
+    .ns1__cta {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .ns1__cta-title {
+      font-weight: 600;
+      font-size: 28px;
+      color: black;
+      line-height: 1.3;
+      margin: 0 0 14px;
+    }
+
+    .ns1__cta-counter {
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 6px 0;
+    }
+
+    .ns1__cta-icon {
+      width: 24px;
+      height: 24px;
+      animation: ns1spin 3s linear infinite;
+    }
+
+    @keyframes ns1spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .ns1__sb-bg {
+      background: #fff;
+      padding: 24px 20px 40px;
+    }
+
+    .ns1__sb {
+      max-width: 710px;
+      margin: 0 auto;
+      background: #fff;
+      border: 2px solid #b72922;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ns1__sb-img {
+      flex-shrink: 0;
+      width: 140px;
+      background: #b72922;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .ns1__sb-img::after {
+      content: "";
+      position: absolute;
+      right: -14px;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-top: 80px solid transparent;
+      border-bottom: 80px solid transparent;
+      border-left: 15px solid #b72922;
+    }
+
+    .ns1__sb-img img {
+      width: 80px;
+      height: auto;
+      display: block;
+      filter: brightness(0) invert(1);
+    }
+
+    .ns1__sb-text {
+      flex: 1;
+      padding: 18px 24px 18px 30px;
+    }
+
+    .ns1__sb-headline {
+      font-weight: 700;
+      font-size: 22px;
+      color: #000;
+      line-height: 1.3;
+      margin: 0 0 8px;
+    }
+
+    .ns1__sb-headline .ns1__red {
+      color: #b72922;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+
+    .ns1__sb-sub {
+      font-weight: 400;
+      font-size: 13px;
+      color: #555;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .ns1__guarantee-bg {
+        padding: 30px 16px 36px;
+      }
+
+      .ns1__guarantee {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .ns1__guarantee-img {
+        width: auto;
+        padding-top: 0;
+      }
+
+      .ns1__guarantee-img img {
+        max-width: 140px;
+      }
+
+      .ns1__guarantee-title-white,
+      .ns1__guarantee-title-red {
+        font-size: 22px;
+      }
+
+      .ns1__guarantee-text {
+        text-align: center;
+      }
+
+      .ns1__guarantee-body {
+        font-size: 14px;
+      }
+
+      .ns1__badges {
+        justify-content: center;
+      }
+
+      .ns1__badges img {
+        height: 52px;
+      }
+
+      .ns1__shipping {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .ns1__shipping-truck img {
+        width: 64px;
+      }
+
+      .ns1__shipping-text {
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .ns1__reviews-bg {
+        padding: 35px 16px 25px;
+      }
+
+      .ns1__reviews-title {
+        font-size: 22px;
+      }
+
+      .ns1__reviews-subtitle {
+        font-size: 18px;
+      }
+
+      .ns1__rv-body {
+        font-size: 13px;
+      }
+
+      .ns1__cta-bg {
+        padding: 28px 16px 22px;
+      }
+
+      .ns1__cta-title {
+        font-size: 19px;
+      }
+
+      .ns1__cta-counter {
+        font-size: 12px;
+      }
+
+      .ns1__sb-bg {
+        padding: 16px 16px 28px;
+      }
+
+      .ns1__sb-img {
+        width: 86px;
+      }
+
+      .ns1__sb-img img {
+        width: 56px;
+      }
+
+      .ns1__sb-img::after {
+        border-top-width: 60px;
+        border-bottom-width: 60px;
+      }
+
+      .ns1__sb-text {
+        padding: 12px 14px 12px 22px;
+      }
+
+      .ns1__sb-headline {
+        font-size: 15px;
+      }
+
+      .ns1__sb-sub {
+        font-size: 11px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ns1__cta-icon {
+        animation: none !important;
+      }
+    }
+
+    .ns2 {
+      box-sizing: border-box;
+    }
+
+    .ns2 *,
+    .ns2 *::before,
+    .ns2 *::after {
+      box-sizing: border-box;
+    }
+
+    .ns2 {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      color: #000;
+    }
+
+    .ns2__faq-bg {
+      background: linear-gradient(135deg, #b72922 0%, #b72922 100%);
+      padding: 50px 20px 60px;
+    }
+
+    .ns2__faq {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .ns2__faq-title {
+      font-weight: 600;
+      font-size: 32px;
+      color: #fff;
+      text-align: center;
+      margin: 0 0 30px;
+      line-height: 1.3;
+    }
+
+    .ns2__faq-item {
+      background: #fff;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    }
+
+    .ns2__faq-q {
+      width: 100%;
+      background: #fff;
+      border: none;
+      padding: 16px 20px;
+      font-weight: 500;
+      font-size: 15px;
+      color: #1d1d1d;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      line-height: 1.4;
+      gap: 12px;
+    }
+
+    .ns2__faq-q-text {
+      flex: 1;
+    }
+
+    .ns2__faq-arrow {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      transition: transform 0.25s ease;
+      color: #1d1d1d;
+    }
+
+    .ns2__faq-item.ns2--open .ns2__faq-arrow {
+      transform: rotate(180deg);
+    }
+
+    .ns2__faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .ns2__faq-item.ns2--open .ns2__faq-a {
+      max-height: 600px;
+    }
+
+    .ns2__faq-a-text {
+      font-weight: 400;
+      font-size: 14px;
+      color: #1d1d1d;
+      line-height: 1.6;
+      text-align: center;
+      padding: 6px 20px 18px;
+    }
+
+    .ns2__droz-bg {
+      background: #fff;
+      padding: 40px 20px;
+    }
+
+    .ns2__droz {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #b72922;
+      border: 5px double #ffffff8e;
+      border-radius: 18px;
+      padding: 36px;
+      display: flex;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .ns2__droz-img {
+      flex: 0 0 33%;
+    }
+
+    .ns2__droz-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .ns2__droz-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .ns2__droz-title {
+      font-weight: 700;
+      font-size: 28px;
+      color: #fff;
+      margin: 0 0 16px;
+      line-height: 1.2;
+    }
+
+    .ns2__droz-body {
+      font-weight: 400;
+      font-size: 15px;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .ns2__droz-body p {
+      margin: 0 0 14px;
+    }
+
+    .ns2__droz-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .ns2__droz-body b {
+      font-weight: 700;
+    }
+
+    .ns2__guarantee-bg {
+      background: linear-gradient(135deg, #b72922 0%, #b72922 100%);
+      padding: 50px 20px 60px;
+    }
+
+    .ns2__guarantee {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    .ns2__guarantee-img {
+      flex-shrink: 0;
+      width: 200px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 30px;
+    }
+
+    .ns2__guarantee-img img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      display: block;
+    }
+
+    .ns2__guarantee-text {
+      flex: 1;
+      min-width: 0;
+      color: white !important;
+    }
+
+    .ns2__guarantee-title-white {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.2;
+      color: white !important;
+      margin: 0 0 6px;
+    }
+
+    .ns2__guarantee-title-red {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.2;
+      color: white !important;
+      margin: 0 0 18px;
+    }
+
+    .ns2__guarantee-body {
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 1.55;
+      color: white !important;
+    }
+
+    .ns2__guarantee-body p {
+      margin: 0 0 12px;
+      color: white !important;
+    }
+
+    .ns2__guarantee-body a {
+      color: white !important;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .ns2__badges {
+      margin-top: 22px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .ns2__badges img {
+      height: 70px;
+      width: auto;
+      display: block;
+    }
+
+    .ns2__cta-bg {
+      background: linear-gradient(90deg, #b72922 0%, #b72922 100%);
+      padding: 32px 20px 24px;
+    }
+
+    .ns2__cta {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      color: black !important;
+    }
+
+    .ns2__cta-title {
+      font-weight: 600;
+      font-size: 26px;
+      color: black !important;
+      line-height: 1.3;
+      margin: 0 0 14px;
+    }
+
+    .ns2__cta-counter {
+      color: black !important;
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 6px 0;
+    }
+
+    .ns2__cta-counter span {
+      color: #ffffff !important;
+    }
+
+    .ns2__cta-icon {
+      width: 24px;
+      height: 24px;
+      animation: ns2spin 3s linear infinite;
+    }
+
+    @keyframes ns2spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .ns2__sb-bg {
+      background: #fff;
+      padding: 24px 20px 40px;
+    }
+
+    .ns2__sb {
+      max-width: 710px;
+      margin: 0 auto;
+      background: #fff;
+      border: 2px solid #b72922;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ns2__sb-img {
+      flex-shrink: 0;
+      width: 140px;
+      background: #b72922;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .ns2__sb-img::after {
+      content: "";
+      position: absolute;
+      right: -14px;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-top: 80px solid transparent;
+      border-bottom: 80px solid transparent;
+      border-left: 15px solid #b72922;
+    }
+
+    .ns2__sb-img img {
+      width: 80px;
+      height: auto;
+      display: block;
+      filter: brightness(0) invert(1);
+    }
+
+    .ns2__sb-text {
+      flex: 1;
+      padding: 18px 24px 18px 30px;
+    }
+
+    .ns2__sb-headline {
+      font-weight: 700;
+      font-size: 22px;
+      color: #000;
+      line-height: 1.3;
+      margin: 0 0 8px;
+    }
+
+    .ns2__sb-headline .ns2__red {
+      color: #b72922;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+
+    .ns2__sb-sub {
+      font-weight: 400;
+      font-size: 13px;
+      color: #555;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .ns2__faq-bg {
+        padding: 35px 16px 40px;
+      }
+
+      .ns2__faq-title {
+        font-size: 24px;
+        margin-bottom: 22px;
+      }
+
+      .ns2__faq-q {
+        font-size: 13px;
+        padding: 13px 16px;
+      }
+
+      .ns2__faq-a-text {
+        font-size: 13px;
+        padding: 4px 16px 16px;
+      }
+
+      .ns2__droz-bg {
+        padding: 24px 16px;
+      }
+
+      .ns2__droz {
+        flex-direction: column;
+        padding: 24px;
+        gap: 18px;
+        text-align: center;
+      }
+
+      .ns2__droz-img {
+        flex: none;
+        width: 70%;
+      }
+
+      .ns2__droz-content {
+        text-align: left;
+      }
+
+      .ns2__droz-title {
+        font-size: 22px;
+        text-align: center;
+      }
+
+      .ns2__guarantee-bg {
+        padding: 30px 16px 36px;
+      }
+
+      .ns2__guarantee {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .ns2__guarantee-img {
+        width: auto;
+        padding-top: 0;
+      }
+
+      .ns2__guarantee-img img {
+        max-width: 140px;
+      }
+
+      .ns2__guarantee-title-white,
+      .ns2__guarantee-title-red {
+        font-size: 22px;
+      }
+
+      .ns2__guarantee-text {
+        text-align: center;
+      }
+
+      .ns2__guarantee-body {
+        font-size: 14px;
+      }
+
+      .ns2__badges {
+        justify-content: center;
+      }
+
+      .ns2__badges img {
+        height: 52px;
+      }
+
+      .ns2__cta-title {
+        font-size: 19px;
+      }
+
+      .ns2__cta-counter {
+        font-size: 12px;
+      }
+
+      .ns2__sb-bg {
+        padding: 16px 16px 28px;
+      }
+
+      .ns2__sb-img {
+        width: 86px;
+      }
+
+      .ns2__sb-img img {
+        width: 56px;
+      }
+
+      .ns2__sb-img::after {
+        border-top-width: 60px;
+        border-bottom-width: 60px;
+      }
+
+      .ns2__sb-text {
+        padding: 12px 14px 12px 22px;
+      }
+
+      .ns2__sb-headline {
+        font-size: 15px;
+      }
+
+      .ns2__sb-sub {
+        font-size: 11px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ns2__cta-icon {
+        animation: none !important;
+      }
+    }
+
+    .fbc2 {
+      box-sizing: border-box;
+    }
+
+    .fbc2 *,
+    .fbc2 *::before,
+    .fbc2 *::after {
+      box-sizing: border-box;
+    }
+
+    .fbc2 {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 18px;
+      background: #fff;
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      color: #050505;
+    }
+
+    .fbc2__header {
+      font-weight: 700;
+      font-size: 17px;
+      margin: 0 0 18px;
+    }
+
+    .fbc2__box {
+      border: 1px solid #e4e6eb;
+      border-radius: 14px;
+      padding: 18px 16px;
+    }
+
+    .fbc2__c {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .fbc2__c--reply {
+      margin-left: 48px;
+    }
+
+    .fbc2__avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #e4e6eb;
+    }
+
+    .fbc2__avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .fbc2__body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .fbc2__bubble {
+      position: relative;
+      background: #f0f2f5;
+      border-radius: 18px;
+      padding: 9px 16px 10px;
+      display: inline-block;
+      max-width: 100%;
+    }
+
+    .fbc2__name {
+      font-weight: 600;
+      font-size: 13px;
+      color: #385898;
+      line-height: 1.3;
+      margin-bottom: 2px;
+    }
+
+    .fbc2__text {
+      font-size: 15px;
+      line-height: 1.4;
+      color: #050505;
+    }
+
+    .fbc2__reactions {
+      position: absolute;
+      right: 0px;
+      background: #fff;
+      border-radius: 99px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      padding: 1px 6px 1px 2px;
+    }
+
+    .fbc2__react-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .fbc2__react-icon svg {
+      width: 11px;
+      height: 11px;
+      fill: #fff;
+    }
+
+    .fbc2__react-like {
+      background: #1877f2;
+    }
+
+    .fbc2__react-love {
+      background: #f33e58;
+      margin-left: -6px;
+    }
+
+    .fbc2__react-count {
+      font-size: 13px;
+      color: #65676b;
+      font-weight: 500;
+      margin-left: 3px;
+    }
+
+    .fbc2__meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 6px 0 0 16px;
+      font-size: 12px;
+      color: #65676b;
+      font-weight: 600;
+    }
+
+    .fbc2__meta .act {
+      cursor: pointer;
+    }
+
+    .fbc2__meta .act:hover {
+      text-decoration: underline;
+    }
+
+    .fbc2__meta .time {
+      font-weight: 400;
+    }
+
+    .fbc2__footer {
+      text-align: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: #050505;
+      margin-top: 18px;
+    }
+
+    @media (max-width: 600px) {
+      .fbc2 {
+        padding: 16px 12px;
+      }
+
+      .fbc2__c--reply {
+        margin-left: 28px;
+      }
+
+      .fbc2__avatar {
+        width: 34px;
+        height: 34px;
+      }
+
+      .fbc2__text {
+        font-size: 14px;
+      }
+    }
+  </style>
+  <script type="text/javascript">
+    // Carrega o script de tracking dinamicamente baseado no domínio atual
+    (function () {
+      const currentDomain = window.location.hostname;
+      const trackScript = document.createElement('script');
+      trackScript.type = 'text/javascript';
+      trackScript.src = `https://lp.${currentDomain}/track.js`;
+      document.head.appendChild(trackScript);
+    })();
+  </script>
+</head>
+
+<body>
+  <main class="sales-page">
+    <section class="page-section">
+      <div class="page-section__inner">
+        <div class="content-block">
+          <div class="adv-fullwidth">
+            <div class="adv-wrap">
+              <div class="adv-topstrip"></div>
+              <nav class="adv-navbar">
+                <div class="adv-navbar-inner">
+                  <a class="adv-logo" href="">
+                    <img decoding="async" class="adv-logo-img" src="images/6807813.png" alt="Health Logo">
+                    <span class="adv-logo-text">HEALTH</span>
+                  </a>
+                  <div class="adv-nav">
+                    <a href="">ON
+                      THE SHOW</a>
+                    <a href="">SHOP</a>
+                    <a href="">HEALTH</a>
+                    <a href="">WELLNESS</a>
+                    <a href="">PARENTS</a>
+                    <a href="">FOOD</a>
+                    <a href="">LIFE</a>
+                  </div>
+                  <div class="adv-nav-right">
+                    <a class="adv-signin" href="">
+                      <span class="adv-signin-icon">
+                        <svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z">
+                          </path>
+                        </svg>
+                      </span>
+                      <span>SIGN UP / SIGN IN</span>
+                    </a>
+                    <button class="adv-search" aria-label="Search">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                        stroke-linecap="round">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="M21 21l-4.5-4.5"></path>
+                      </svg>
+                    </button>
+                    <button class="adv-hamburger" aria-label="Menu">
+                      <span></span><span></span><span></span>
+                    </button>
+                  </div>
+                </div>
+              </nav>
+              <div class="adv-body">
+                <div class="adv-headline-wrap">
+                  <div class="adv-headline">In a Video, Heart Health Expert Reveals: "Arterial Cement" is Quietly <span
+                      class="hl-red">Choking the Hearts of 119 Million Americans!</span></div>
+                </div>
+                <div class="adv-date" id="advDateEl2"><span class="adv-chevron">âŒ„</span></div>
+                <div class="adv-author-row">
+                  <span class="adv-author-by">Correspondent</span>
+                  <div class="adv-author-avatar">
+                    <span class="adv-author-initials">SA</span>
+                  </div>
+                  <span class="adv-author-name">Sarah Alfonsi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+            (function () {
+              var el = document.getElementById('advDateEl2');
+              if (!el) return;
+              var d = new Date();
+              var months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+              el.innerHTML = months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear() + ' <span class="adv-chevron"></span>';
+            })();
+          </script>
+        </div>
+        <div class="content-block">
+
+
+          <div class="vturb-video-wrapper">
+            <vturb-smartplayer id="vid-6a7a6555d03864b1da21dd5c" style="display: block; margin: 0 auto; width: 100%; ">
+              <div class="vturb-player-placeholder"
+                style="position: relative; width: 100%; padding: 56.25% 0 0; z-index: 0; background-color: black;">
+              </div>
+            </vturb-smartplayer>
+            <script
+              type="text/javascript"> var s = document.createElement("script"); s.src = "https://scripts.converteai.net/5c43223a-5276-4ca3-8a25-4ff9ca0f860d/players/6a7a6555d03864b1da21dd5c/v4/player.js", s.async = !0, document.head.appendChild(s); </script>
+
+            <script>!function (i, n) { i._plt = i._plt || (n && n.timeOrigin ? n.timeOrigin + n.now() : Date.now()) }(window, performance);</script>
+            <link rel="preload"
+              href="https://scripts.converteai.net/5c43223a-5276-4ca3-8a25-4ff9ca0f860d/players/6a7a6555d03864b1da21dd5c/v4/player.js"
+              as="script">
+            <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js"
+              as="script">
+            <link rel="preload"
+              href="https://cdn.converteai.net/5c43223a-5276-4ca3-8a25-4ff9ca0f860d/6a7a6102d03864b1da21da5c/main.m3u8"
+              as="fetch">
+            <link rel="dns-prefetch" href="https://cdn.converteai.net">
+            <link rel="dns-prefetch" href="https://scripts.converteai.net">
+            <link rel="dns-prefetch" href="https://images.converteai.net">
+            <link rel="dns-prefetch" href="https://license.vturb.com">
+          </div>
+
+          <script>
+            var delaySeconds = 4584; // Tempo em segundos
+            var player = document.querySelector("vturb-smartplayer");
+
+            if (player) {
+              // Verifica o tempo do vídeo a cada 1 segundo
+              var pitchInterval = setInterval(function () {
+                if (player.currentTime >= delaySeconds) {
+                  // Quando atingir o tempo, mostra os elementos e para de verificar
+                  document.querySelectorAll(".esconder").forEach(function (el) {
+                    el.style.display = "block";
+                  });
+                  clearInterval(pitchInterval);
+                }
+              }, 1000);
+            }
+          </script>
+
+
+        </div>
+
+        <div class="content-block">
+          <div class="nswatch">
+            <span class="nswatch__dot"></span>
+            <span><span class="nswatch__count" id="nswatchCount"></span> people are watching right now.</span>
+          </div>
+
+          <script>
+            (function () {
+              var el = document.getElementById('nswatchCount');
+              if (!el) return;
+
+              // gera nÃºmero inicial entre 180 e 320
+              var current = Math.floor(Math.random() * 140) + 180;
+              el.textContent = current;
+
+              // a cada 4-9 segundos, sobe ou desce 1-3 pessoas
+              function tick() {
+                var change = (Math.random() < 0.5 ? -1 : 1) * (Math.floor(Math.random() * 3) + 1);
+                current += change;
+                if (current < 150) current = 150 + Math.floor(Math.random() * 20);
+                if (current > 350) current = 320 + Math.floor(Math.random() * 20);
+                el.textContent = current;
+                setTimeout(tick, 4000 + Math.random() * 5000);
+              }
+              setTimeout(tick, 3000);
+            })();
+          </script>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      @media (min-width: 768px) and (max-width: 1024px) {
+        [data-mobile-size][data-desktop-size] {
+          width: 80% !important;
+          /* Tamanho Tablet ForÃ§ado */
+          max-width: 800px;
+        }
+      }
+
+      .vturb-video-wrapper {
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      @media (min-width: 768px) {
+        .vturb-video-wrapper {
+          max-width: 850px;
+          width: 85%;
+        }
+      }
+
+      .esconder {
+        display: none;
+      }
+    </style>
+
+
+
+    <div class="esconder" style="display: none;">
+      <section class="page-section">
+        <div class="page-section__inner">
+          <div class="content-block">
+            <div class="esconder" style="display: none;">
+              <div class="fbcta">
+                <div class="fbcta__cta-bg">
+                  <div class="fbcta__cta">
+                    <h2 class="fbcta__cta-title">Choose Your Discounted CardioFlush Package With<br>Our Special
+                      Time-Limited
+                      Offer!</h2>
+                    <div class="fbcta__cta-counter">
+                      <svg class="fbcta__cta-icon" viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M12 2V7.5L9 10.5M12 22V16.5L15 13.5M18 2H6M18 22H6M8 2V5L12 9L16 5V2M8 22V19L12 15L16 19V22"
+                          stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                      <span>CardioFlush Bottles Remaining: <span id="fbctaCounter"></span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="fbcta__shipping-bg">
+                  <div class="fbcta__shipping">
+                    <div class="fbcta__shipping-img">
+                      <img decoding="async" src="images/5_ship-icon_39175d212d8f.png" alt="FREE Shipping"
+                        loading="lazy">
+                    </div>
+                    <div class="fbcta__shipping-text">
+                      <h3 class="fbcta__shipping-headline">Enjoy <span class="fbcta__yellow">FREE SHIPPING</span> on 3
+                        and
+                        6-Bottle Orders!</h3>
+                      <p class="fbcta__shipping-sub">*For long-term results, we recommend choosing the 6 bottle option
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="content-block" id="scrolldown">
+              <div class="pk">
+                <div class="pk__grid">
+                  <a class="pk__item buylink" href="#" data-click-path="/click/3" data-kit="3">
+                    <div class="pk__wrap">
+                      <div class="pk__header">MOST POPULAR</div>
+                      <div class="pk__offer"><b>BUY 2 GET + 1 FREE</b><span>90 DAY SUPPLY</span></div>
+                      <img decoding="async" class="pk__img" src="images/3-bottles.webp" alt="3 Bottles" loading="lazy">
+                      <div class="pk__price"><b><sup>$</sup>69</b><span>PER<br>BOTTLE</span></div>
+                      <div class="pk__savings">
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> YOU SAVE $240!</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> BIGGEST DISCOUNT</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> 60 DAYS GUARANTEE</div>
+                      </div>
+                      <span class="pk__btn"><span><svg viewBox="0 0 24 24">
+                            <path
+                              d="M7 18a2 2 0 102 2 2 2 0 00-2-2zm10 0a2 2 0 102 2 2 2 0 00-2-2zM7.2 14.8l.03.2H19v-2H8.5l-.5-3H21l-2-7H5.2L4.3 0H1v2h2l3.6 12z">
+                            </path>
+                          </svg> Add to Cart</span></span>
+                      <img decoding="async" class="pk__flags" src="images/9_cards_0c51b8caa3a3.webp" alt="Cards"
+                        loading="lazy">
+                      <div class="pk__totals">Total: <s>$447</s><b>$207</b></div>
+                      <p class="pk__shipping">+ <span>FREE</span> SHIPPING</p>
+                    </div>
+                  </a>
+                  <a class="pk__item pk--promo buylink" href="#" data-click-path="/click/2" data-kit="6">
+                    <div class="pk__wrap">
+                      <div class="pk__header">BEST VALUE!</div>
+                      <div class="pk__offer"><b>BUY 3 GET + 3 FREE</b><span>180 DAY SUPPLY</span></div>
+                      <img decoding="async" class="pk__img" src="images/6-bottles.webp" alt="6 Bottles" loading="lazy">
+                      <div class="pk__price"><b><sup>$</sup>49</b><span>PER<br>BOTTLE</span></div>
+                      <div class="pk__savings">
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> YOU SAVE $600!</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> BIGGEST DISCOUNT</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> 60 DAYS GUARANTEE</div>
+                      </div>
+                      <span class="pk__btn"><span><svg viewBox="0 0 24 24">
+                            <path
+                              d="M7 18a2 2 0 102 2 2 2 0 00-2-2zm10 0a2 2 0 102 2 2 2 0 00-2-2zM7.2 14.8l.03.2H19v-2H8.5l-.5-3H21l-2-7H5.2L4.3 0H1v2h2l3.6 12z">
+                            </path>
+                          </svg> Add to Cart</span></span>
+                      <img decoding="async" class="pk__flags" src="images/7_cards-dark_952aa2fcb1f7.webp" alt="Cards"
+                        loading="lazy">
+                      <div class="pk__totals">Total: <s>$894</s><b>$294</b></div>
+                      <p class="pk__shipping">+ <span>FREE</span> SHIPPING</p>
+                    </div>
+                  </a>
+                  <a class="pk__item buylink" href="#" data-click-path="/click/1" data-kit="2">
+                    <div class="pk__wrap">
+                      <div class="pk__header">BASIC</div>
+                      <div class="pk__offer"><b>2 BOTTLES</b><span>60 DAY SUPPLY</span></div>
+                      <img decoding="async" class="pk__img" src="images/2-bottles.webp" alt="2 Bottles" loading="lazy">
+                      <div class="pk__price"><b><sup>$</sup>79</b><span>PER<br>BOTTLE</span></div>
+                      <div class="pk__savings">
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> YOU SAVE $140!</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> BIGGEST DISCOUNT</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> 60 DAYS GUARANTEE</div>
+                      </div>
+                      <span class="pk__btn"><span><svg viewBox="0 0 24 24">
+                            <path
+                              d="M7 18a2 2 0 102 2 2 2 0 00-2-2zm10 0a2 2 0 102 2 2 2 0 00-2-2zM7.2 14.8l.03.2H19v-2H8.5l-.5-3H21l-2-7H5.2L4.3 0H1v2h2l3.6 12z">
+                            </path>
+                          </svg> Add to Cart</span></span>
+                      <img decoding="async" class="pk__flags" src="images/9_cards_0c51b8caa3a3.webp" alt="Cards"
+                        loading="lazy">
+                      <div class="pk__totals">Total: <s>$298</s><b>$158</b></div>
+                      <p class="pk__shipping">+ SHIPPING</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+
+        <section class="page-section">
+          <div class="page-section__inner">
+            <div class="content-block">
+              <div class="ns1">
+                <div class="ns1__guarantee-bg">
+                  <div class="ns1__guarantee">
+                    <div class="ns1__guarantee-img">
+                      <img decoding="async" src="images/11_guarantee-badge_7975f4b4e9e4.png" alt="Guarantee"
+                        loading="lazy">
+                    </div>
+                    <div class="ns1__guarantee-text">
+                      <h2 class="ns1__guarantee-title-white">100% Satisfaction or Your Money Back</h2>
+                      <h3 class="ns1__guarantee-title-red">60-Day Unconditional Guarantee</h3>
+                      <div class="ns1__guarantee-body">
+                        <p>If for any reason within 60 days you're not satisfied with the product, just send an email to
+                          <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                            data-cfemail="0f6c60617b6e6c7b4f6c7a7c7b60626a7d6c7c216c6062">[emailï¿½protected]</a> and
+                          we'll immediately buy back
+                          all the bottles from you at the same price you paid —- no questions asked and no
+                          hassles.
+                        </p>
+                        <p>Simply return the unused bottles, and we'll buy them all back —- even if they're
+                          damaged. No
+                          questions asked —- it's an unconditional guarantee! That's how confident we are in CardioFlush.
+                        </p>
+                      </div>
+                      <div class="ns1__badges">
+                        <img decoding="async" src="images/12_gmp_b1c02379abb1.png" alt="GMP" loading="lazy">
+                        <img decoding="async" src="images/13_fda_57b502f6e629.png" alt="FDA" loading="lazy">
+                        <img decoding="async" src="images/14_nat_22e46dd2e713.png" alt="Natural" loading="lazy">
+                        <img decoding="async" src="images/15_foreign_45198b12fc6e.png" alt="No Foreign" loading="lazy">
+                        <img decoding="async" src="images/16_gmo_6ca4635d82dd.png" alt="GMO Free" loading="lazy">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ns1__shipping-bg">
+                  <div class="ns1__shipping">
+                    <div class="ns1__shipping-truck">
+                      <img decoding="async" src="images/5_ship-icon_39175d212d8f.png" alt="FREE Shipping"
+                        loading="lazy">
+                    </div>
+                    <div class="ns1__shipping-text">
+                      Restore Healthy Blood Pressure Faster With Our 3 Or 6 Month<br>CardioFlush Package —- Plus
+                      FREE
+                      Shipping!
+                    </div>
+                  </div>
+                </div>
+                <div class="ns1__reviews-bg">
+                  <div class="ns1__reviews">
+                    <h2 class="ns1__reviews-title">What People Are Saying About CardioFlush?</h2>
+                    <p class="ns1__reviews-subtitle">Real Life-Changing Results!</p>
+                    <p class="ns1__reviews-label">Top reviews from the United States</p>
+                    <div class="ns1__review">
+                      <div class="ns1__rv-head">
+                        <div class="ns1__rv-avatar"><img decoding="async" src="images/1_QRhrvdDn2yO_CgcJFbghDg.jpg"
+                            alt="Lisa M." loading="lazy"></div>
+                        <div><span class="ns1__rv-name">Lisa M.</span> <span class="ns1__rv-loc">– Montclair,
+                            NJ</span>
+                        </div>
+                      </div>
+                      <div class="ns1__rv-stars"><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg></div>
+                      <p class="ns1__rv-purchased">Purchased CardioFlush 6 Bottles Package</p>
+                      <p class="ns1__rv-body">For the last 5 years I lived terrified of every blood pressure reading
+                        —-
+                        158/96 at every doctor visit, two different meds, constant headaches. After just 4 weeks on
+                        Blood
+                        Pril my morning readings dropped to 122/79. My cardiologist couldn't believe it. He's already
+                        started weaning me off one of the meds. I haven't felt this clear-headed in a decade.</p>
+                      <p class="ns1__rv-helpful">42 people found this helpful</p>
+                      <div class="ns1__rv-actions"><span>Helpful</span><span>Share</span><span>Report</span></div>
+                    </div>
+                    <div class="ns1__review">
+                      <div class="ns1__rv-head">
+                        <div class="ns1__rv-avatar"><img decoding="async"
+                            src="images/505732186_10228909505707682_2186691460116083032_n.jpg" alt="Tamika W."
+                            loading="lazy"></div>
+                        <div><span class="ns1__rv-name">Tamika W.</span> <span class="ns1__rv-loc">– Atlanta,
+                            GA</span>
+                        </div>
+                      </div>
+                      <div class="ns1__rv-stars"><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg></div>
+                      <p class="ns1__rv-purchased">Purchased CardioFlush 6 Bottles Package</p>
+                      <p class="ns1__rv-body">After my second son was born my pressure spiked to 165/102 and never came
+                        back
+                        down. 4 years on Losartan, Amlodipine, and Lisinopril —- none of them stuck. A coworker
+                        swore
+                        by
+                        CardioFlush so I gave it one last shot. In just 30 days I went from 165/102 down to 124/81. Last
+                        week
+                        my doctor cleared me off two of the three meds. I cried in the parking lot.</p>
+                      <p class="ns1__rv-helpful">38 people found this helpful</p>
+                      <div class="ns1__rv-actions"><span>Helpful</span><span>Share</span><span>Report</span></div>
+                    </div>
+                    <div class="ns1__review">
+                      <div class="ns1__rv-head">
+                        <div class="ns1__rv-avatar"><img decoding="async" src="images/images-65.jpeg" alt="Margaret D."
+                            loading="lazy"></div>
+                        <div><span class="ns1__rv-name">Margaret D.</span> <span class="ns1__rv-loc">– Phoenix,
+                            AZ</span>
+                        </div>
+                      </div>
+                      <div class="ns1__rv-stars"><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg></div>
+                      <p class="ns1__rv-purchased">Purchased CardioFlush 6 Bottles Package</p>
+                      <p class="ns1__rv-body">At 62, I had given up. I've spent thousands over the years —- every
+                        "natural"
+                        pressure pill on Amazon, every supplement my pharmacist suggested. Every single one was useless.
+                        My
+                        daughter begged me to try CardioFlush and I honestly bought it just to make her stop nagging. 3
+                        weeks
+                        later my pressure is at 128/82 and my headaches are gone. I keep waiting for the catch but there
+                        isn't one.</p>
+                      <p class="ns1__rv-helpful">29 people found this helpful</p>
+                      <div class="ns1__rv-actions"><span>Helpful</span><span>Share</span><span>Report</span></div>
+                    </div>
+                    <div class="ns1__review">
+                      <div class="ns1__rv-head">
+                        <div class="ns1__rv-avatar"><img decoding="async" src="images/images-66.jpeg" alt="Michael J."
+                            loading="lazy"></div>
+                        <div><span class="ns1__rv-name">Michael J.</span> <span class="ns1__rv-loc">– Austin,
+                            TX</span>
+                        </div>
+                      </div>
+                      <div class="ns1__rv-stars"><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg><svg viewBox="0 0 24 24">
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
+                        </svg></div>
+                      <p class="ns1__rv-purchased">Purchased CardioFlush 6 Bottles Package</p>
+                      <p class="ns1__rv-body">Look, I'm a hard skeptic. I've taken pressure meds for 12 years and every
+                        doctor said it was a "lifetime thing." My wife stumbled on CardioFlush and showed me. I told her
+                        flat
+                        out it was probably a scam. She bought it anyway. 30 days in I went from 172/108 to 119/78
+                        —-
+                        and
+                        that's WITHOUT increasing my meds. My doctor literally asked what protocol I was on. First time
+                        I've
+                        felt like myself in over a decade.</p>
+                      <p class="ns1__rv-helpful">61 people found this helpful</p>
+                      <div class="ns1__rv-actions"><span>Helpful</span><span>Share</span><span>Report</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ns1__cta-bg">
+                  <div class="ns1__cta">
+                    <h2 class="ns1__cta-title">Choose Your Discounted CardioFlush Package With<br>Our Special
+                      Time-Limited
+                      Offer!</h2>
+                    <div class="ns1__cta-counter">
+                      <svg class="ns1__cta-icon" viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M12 2V7.5L9 10.5M12 22V16.5L15 13.5M18 2H6M18 22H6M8 2V5L12 9L16 5V2M8 22V19L12 15L16 19V22"
+                          stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                      <span>CardioFlush Bottles Remaining: <span id="ns1counter"></span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="ns1__sb-bg">
+                  <div class="ns1__sb">
+                    <div class="ns1__sb-img"><img decoding="async" src="images/5_ship-icon_39175d212d8f.png"
+                        alt="FREE Shipping" loading="lazy"></div>
+                    <div class="ns1__sb-text">
+                      <h3 class="ns1__sb-headline">Enjoy <span class="ns1__red">FREE SHIPPING</span> on 3 and 6-Bottle
+                        Orders!</h3>
+                      <p class="ns1__sb-sub">*For long-term results, we recommend choosing the 6 bottle option</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page-section">
+          <div class="page-section__inner">
+            <div class="content-block">
+              <div class="pk">
+                <div class="pk__grid">
+                  <a class="pk__item buylink" href="#" data-click-path="/click/3" data-kit="3">
+                    <div class="pk__wrap">
+                      <div class="pk__header">MOST POPULAR</div>
+                      <div class="pk__offer"><b>BUY 2 GET + 1 FREE</b><span>90 DAY SUPPLY</span></div>
+                      <img decoding="async" class="pk__img" src="images/3-bottles.webp" alt="3 Bottles" loading="lazy">
+                      <div class="pk__price"><b><sup>$</sup>69</b><span>PER<br>BOTTLE</span></div>
+                      <div class="pk__savings">
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> YOU SAVE $240!</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> BIGGEST DISCOUNT</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> 60 DAYS GUARANTEE</div>
+                      </div>
+                      <span class="pk__btn"><span><svg viewBox="0 0 24 24">
+                            <path
+                              d="M7 18a2 2 0 102 2 2 2 0 00-2-2zm10 0a2 2 0 102 2 2 2 0 00-2-2zM7.2 14.8l.03.2H19v-2H8.5l-.5-3H21l-2-7H5.2L4.3 0H1v2h2l3.6 12z">
+                            </path>
+                          </svg> Add to Cart</span></span>
+                      <img decoding="async" class="pk__flags" src="images/9_cards_0c51b8caa3a3.webp" alt="Cards"
+                        loading="lazy">
+                      <div class="pk__totals">Total: <s>$447</s><b>$207</b></div>
+                      <p class="pk__shipping">+ <span>FREE</span> SHIPPING</p>
+                    </div>
+                  </a>
+                  <a class="pk__item pk--promo buylink" href="#" data-click-path="/click/2" data-kit="6">
+                    <div class="pk__wrap">
+                      <div class="pk__header">BEST VALUE!</div>
+                      <div class="pk__offer"><b>BUY 3 GET + 3 FREE</b><span>180 DAY SUPPLY</span></div>
+                      <img decoding="async" class="pk__img" src="images/6-bottles.webp" alt="6 Bottles" loading="lazy">
+                      <div class="pk__price"><b><sup>$</sup>49</b><span>PER<br>BOTTLE</span></div>
+                      <div class="pk__savings">
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> YOU SAVE $600!</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> BIGGEST DISCOUNT</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> 60 DAYS GUARANTEE</div>
+                      </div>
+                      <span class="pk__btn"><span><svg viewBox="0 0 24 24">
+                            <path
+                              d="M7 18a2 2 0 102 2 2 2 0 00-2-2zm10 0a2 2 0 102 2 2 2 0 00-2-2zM7.2 14.8l.03.2H19v-2H8.5l-.5-3H21l-2-7H5.2L4.3 0H1v2h2l3.6 12z">
+                            </path>
+                          </svg> Add to Cart</span></span>
+                      <img decoding="async" class="pk__flags" src="images/7_cards-dark_952aa2fcb1f7.webp" alt="Cards"
+                        loading="lazy">
+                      <div class="pk__totals">Total: <s>$894</s><b>$294</b></div>
+                      <p class="pk__shipping">+ <span>FREE</span> SHIPPING</p>
+                    </div>
+                  </a>
+                  <a class="pk__item buylink" href="#" data-click-path="/click/1" data-kit="2">
+                    <div class="pk__wrap">
+                      <div class="pk__header">BASIC</div>
+                      <div class="pk__offer"><b>2 BOTTLES</b><span>60 DAY SUPPLY</span></div>
+                      <img decoding="async" class="pk__img" src="images/2-bottles.webp" alt="2 Bottles" loading="lazy">
+                      <div class="pk__price"><b><sup>$</sup>79</b><span>PER<br>BOTTLE</span></div>
+                      <div class="pk__savings">
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> YOU SAVE $140!</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> BIGGEST DISCOUNT</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> 60 DAYS GUARANTEE</div>
+                      </div>
+                      <span class="pk__btn"><span><svg viewBox="0 0 24 24">
+                            <path
+                              d="M7 18a2 2 0 102 2 2 2 0 00-2-2zm10 0a2 2 0 102 2 2 2 0 00-2-2zM7.2 14.8l.03.2H19v-2H8.5l-.5-3H21l-2-7H5.2L4.3 0H1v2h2l3.6 12z">
+                            </path>
+                          </svg> Add to Cart</span></span>
+                      <img decoding="async" class="pk__flags" src="images/9_cards_0c51b8caa3a3.webp" alt="Cards"
+                        loading="lazy">
+                      <div class="pk__totals">Total: <s>$298</s><b>$158</b></div>
+                      <p class="pk__shipping">+ SHIPPING</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page-section">
+          <div class="page-section__inner">
+            <div class="content-block">
+              <div class="ns2">
+                <div class="ns2__faq-bg">
+                  <div class="ns2__faq">
+                    <h2 class="ns2__faq-title">Frequently Asked Questions</h2>
+                    <div class="ns2__faq-item"><button class="ns2__faq-q"><span class="ns2__faq-q-text">Is CardioFlush
+                          safe
+                          to use?</span><svg class="ns2__faq-arrow" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></button>
+                      <div class="ns2__faq-a">
+                        <div class="ns2__faq-a-text">Absolutely. CardioFlush is made with 100% natural ingredients, all
+                          blended in clinically precise doses. It's manufactured in a U.S.-based, FDA-registered and
+                          GMP-certified facility that follows strict safety and quality regulations. Still, if you have
+                          any
+                          medical conditions or are taking medications, it's always a good idea to consult your
+                          healthcare
+                          provider before starting.</div>
+                      </div>
+                    </div>
+                    <div class="ns2__faq-item"><button class="ns2__faq-q"><span class="ns2__faq-q-text">How long will it
+                          take to see results?</span><svg class="ns2__faq-arrow" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></button>
+                      <div class="ns2__faq-a">
+                        <div class="ns2__faq-a-text">Some users notice reduced headaches, less chest tightness, and
+                          better
+                          energy within the first few days. Visible blood pressure improvements tend to start around day
+                          4
+                          or 5, and most people report seeing their morning readings drop within the first 10 days. For
+                          long-lasting, permanent results, the full 3- to 6-month treatment is strongly recommended, as
+                          it
+                          gives your body time to fully flush the arterial cement that's been silently hardening your
+                          arteries —- restoring healthy circulation at the root.</div>
+                      </div>
+                    </div>
+                    <div class="ns2__faq-item"><button class="ns2__faq-q"><span class="ns2__faq-q-text">Is CardioFlush
+                          sold
+                          on Amazon?</span><svg class="ns2__faq-arrow" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></button>
+                      <div class="ns2__faq-a">
+                        <div class="ns2__faq-a-text">No. CardioFlush is only sold on this page, through the official
+                          website.
+                          Buying elsewhere may expose you to counterfeit or expired products. Always purchase directly
+                          here
+                          to ensure authenticity and guarantee coverage.</div>
+                      </div>
+                    </div>
+                    <div class="ns2__faq-item"><button class="ns2__faq-q"><span class="ns2__faq-q-text">Will I need to
+                          follow a strict diet or exercise plan?</span><svg class="ns2__faq-arrow" viewBox="0 0 24 24"
+                          fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                          stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></button>
+                      <div class="ns2__faq-a">
+                        <div class="ns2__faq-a-text">Not at all. CardioFlush was designed for people who want to restore
+                          healthy blood pressure naturally without restrictive routines. The formula works at the
+                          arterial
+                          level —- dissolving the microplastic buildup that's been hardening your arteries
+                          —- allowing
+                          your
+                          pressure to normalize even if you continue your everyday lifestyle. Of course, healthy habits
+                          may
+                          enhance your results, but they're not required.</div>
+                      </div>
+                    </div>
+                    <div class="ns2__faq-item"><button class="ns2__faq-q"><span class="ns2__faq-q-text">What if I'm
+                          older
+                          or
+                          already on blood pressure medication?</span><svg class="ns2__faq-arrow" viewBox="0 0 24 24"
+                          fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                          stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></button>
+                      <div class="ns2__faq-a">
+                        <div class="ns2__faq-a-text">That's totally fine. CardioFlush works for people of all ages,
+                          including
+                          those over 60 and those already taking Losartan, Lisinopril, Amlodipine, or other common blood
+                          pressure medications. Many users report their doctor reducing or eliminating their
+                          prescriptions
+                          after just a few weeks. The formula is gentle yet effective, regardless of age or how long
+                          you've
+                          been on medication.</div>
+                      </div>
+                    </div>
+                    <div class="ns2__faq-item"><button class="ns2__faq-q"><span class="ns2__faq-q-text">Can I use Blood
+                          Pril
+                          with other supplements or medications?</span><svg class="ns2__faq-arrow" viewBox="0 0 24 24"
+                          fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                          stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></button>
+                      <div class="ns2__faq-a">
+                        <div class="ns2__faq-a-text">In general, yes. But since CardioFlush already includes powerful
+                          cardiovascular ingredients, we recommend checking with your doctor if you're taking similar
+                          supplements or blood pressure medications —- to monitor your readings and adjust dosages
+                          safely
+                          as
+                          your pressure normalizes.</div>
+                      </div>
+                    </div>
+                    <div class="ns2__faq-item"><button class="ns2__faq-q"><span class="ns2__faq-q-text">How many bottles
+                          should I order?</span><svg class="ns2__faq-arrow" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></button>
+                      <div class="ns2__faq-a">
+                        <div class="ns2__faq-a-text">To unlock permanent results, we recommend the 6-bottle package.
+                          That's
+                          the ideal duration to fully flush the arterial cement out of your bloodstream —-
+                          allowing
+                          your
+                          pressure to stay normalized even after you finish the treatment. Plus, you'll get exclusive
+                          digital bonuses and free shipping when you order today.</div>
+                      </div>
+                    </div>
+                    <div class="ns2__faq-item"><button class="ns2__faq-q"><span class="ns2__faq-q-text">Will my pressure
+                          stay normal once I stop taking CardioFlush?</span><svg class="ns2__faq-arrow"
+                          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></button>
+                      <div class="ns2__faq-a">
+                        <div class="ns2__faq-a-text">Yes —- as long as you complete the full 6-month treatment.
+                          Unlike
+                          pressure medications that only mask the symptom while you're on them, CardioFlush addresses
+                          the
+                          root cause: the arterial cement built up by decades of microplastic exposure. Once your
+                          arteries
+                          are clean, your pressure stays normalized for good.</div>
+                      </div>
+                    </div>
+                    <div class="ns2__faq-item"><button class="ns2__faq-q"><span class="ns2__faq-q-text">What if Blood
+                          Pril
+                          doesn't work for me?</span><svg class="ns2__faq-arrow" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></button>
+                      <div class="ns2__faq-a">
+                        <div class="ns2__faq-a-text">We're so confident in CardioFlush that we offer a 60-day money-back
+                          guarantee. If you're not completely satisfied —- even after giving it a fair try
+                          —- just
+                          send us
+                          an
+                          email and we'll refund every penny.</div>
+                      </div>
+                    </div>
+                    <div class="ns2__faq-item"><button class="ns2__faq-q"><span class="ns2__faq-q-text">How fast will I
+                          receive my order?</span><svg class="ns2__faq-arrow" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></button>
+                      <div class="ns2__faq-a">
+                        <div class="ns2__faq-a-text">Most CardioFlush orders are processed within 1–2 business
+                          days.
+                          Shipping
+                          usually takes 3–5 days within the U.S. Orders that include the 6-bottle package receive
+                          priority
+                          fulfillment for faster delivery.</div>
+                      </div>
+                    </div>
+                    <div class="ns2__faq-item ns2--open"><button class="ns2__faq-q"><span class="ns2__faq-q-text">What's
+                          the
+                          best way to take CardioFlush?</span><svg class="ns2__faq-arrow" viewBox="0 0 24 24"
+                          fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                          stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></button>
+                      <div class="ns2__faq-a">
+                        <div class="ns2__faq-a-text">Each morning, simply take 1 capsule with water on an empty stomach.
+                          That's it —- just take it and drink water, no hassle. Stay consistent and let the
+                          formula
+                          flush
+                          the
+                          arterial cement out naturally from inside your body.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ns2__droz-bg">
+                  <div class="ns2__droz">
+                    <div class="ns2__droz-img">
+                      <img decoding="async"
+                        src="images/MV5BOTViMDk4YjUtNDQxYy00ZTEzLTllNzEtNmY2YTNmYmJjNzNhXkEyXkFqcGc%40._V1_.jpg"
+                        alt="Dr. Sanjay Gupta" loading="lazy">
+                    </div>
+                    <div class="ns2__droz-content">
+                      <h2 class="ns2__droz-title">Who Is Dr. Sanjay Gupta?</h2>
+                      <div class="ns2__droz-body">
+                        <p>Dr. Sanjay Gupta is one of America's most respected neurosurgeons and cardiovascular
+                          researchers,
+                          known for his groundbreaking work uncovering the silent triggers behind chronic high blood
+                          pressure. Through his research, he identified <b>arterial cement</b> —- a microplastic
+                          buildup
+                          that's been quietly hardening the arteries of 119 million Americans, slowing circulation and
+                          forcing the heart to pump against constant resistance.</p>
+                        <p>To address this at the root, Dr. Gupta helped develop <b>CardioFlush</b>, inspired by the
+                          <b>Sardinian arterial flush ritual</b> used in the longest-lived population on Earth —-
+                          working
+                          alongside a U.S.-based GMP-certified laboratory to create a precise bioactive formula designed
+                          to
+                          dissolve arterial cement naturally. His breakthrough approach has already helped thousands
+                          restore
+                          healthy blood pressure without lifelong medications or invasive procedures.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ns2__guarantee-bg">
+                  <div class="ns2__guarantee">
+                    <div class="ns2__guarantee-img">
+                      <img decoding="async" src="images/11_guarantee-badge_7975f4b4e9e4.png" alt="Guarantee"
+                        loading="lazy">
+                    </div>
+                    <div class="ns2__guarantee-text">
+                      <h2 class="ns2__guarantee-title-white">100% Satisfaction or Your Money Back</h2>
+                      <h3 class="ns2__guarantee-title-red">60-Day Unconditional Guarantee</h3>
+                      <div class="ns2__guarantee-body">
+                        <p>If for any reason within 60 days you're not satisfied with the product, just send an email to
+                          <a href="/cdn-cgi/l/email-protection#96f5f9f8e2f7f5e2d6f5e3e5e2f9fbf3e4f5e5b8f5f9fb"><span
+                              class="__cf_email__"
+                              data-cfemail="f4979b9a80959780b4978187809b9991869787da979b99">[emailï¿½protected]</span></a>
+                          and we'll immediately buy
+                          back
+                          all the bottles from you at the same price you paid —- no questions asked and no
+                          hassles.
+                        </p>
+                        <p>Simply return the unused bottles, and we'll buy them all back —- even if they're
+                          damaged. No
+                          questions asked —- it's an unconditional guarantee! That's how confident we are in CardioFlush.
+                        </p>
+                      </div>
+                      <div class="ns2__badges">
+                        <img decoding="async" src="images/12_gmp_b1c02379abb1.png" alt="GMP" loading="lazy">
+                        <img decoding="async" src="images/13_fda_57b502f6e629.png" alt="FDA" loading="lazy">
+                        <img decoding="async" src="images/14_nat_22e46dd2e713.png" alt="Natural" loading="lazy">
+                        <img decoding="async" src="images/15_foreign_45198b12fc6e.png" alt="No Foreign" loading="lazy">
+                        <img decoding="async" src="images/16_gmo_6ca4635d82dd.png" alt="GMO Free" loading="lazy">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ns2__cta-bg">
+                  <div class="ns2__cta">
+                    <h2 class="ns2__cta-title">Choose Your Discounted CardioFlush Package With<br>Our Special
+                      Time-Limited
+                      Offer!</h2>
+                    <div class="ns2__cta-counter">
+                      <svg class="ns2__cta-icon" viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M12 2V7.5L9 10.5M12 22V16.5L15 13.5M18 2H6M18 22H6M8 2V5L12 9L16 5V2M8 22V19L12 15L16 19V22"
+                          stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                      <span>CardioFlush Bottles Remaining: <span id="ns2counter"></span></span>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="ns2__sb-bg">
+                  <div class="ns2__sb">
+                    <div class="ns2__sb-img"><img decoding="async" src="images/5_ship-icon_39175d212d8f.png"
+                        alt="FREE Shipping" loading="lazy"></div>
+                    <div class="ns2__sb-text">
+                      <h3 class="ns2__sb-headline">Enjoy <span class="ns2__red">FREE SHIPPING</span> on 3 and 6-Bottle
+                        Orders!</h3>
+                      <p class="ns2__sb-sub">*For long-term results, we recommend choosing the 6 bottle option</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page-section">
+          <div class="page-section__inner">
+            <div class="content-block">
+              <div class="pk">
+                <div class="pk__grid">
+                  <a class="pk__item buylink" href="#" data-click-path="/click/3" data-kit="3">
+                    <div class="pk__wrap">
+                      <div class="pk__header">MOST POPULAR</div>
+                      <div class="pk__offer"><b>BUY 2 GET + 1 FREE</b><span>90 DAY SUPPLY</span></div>
+                      <img decoding="async" class="pk__img" src="images/3-bottles.webp" alt="3 Bottles" loading="lazy">
+                      <div class="pk__price"><b><sup>$</sup>69</b><span>PER<br>BOTTLE</span></div>
+                      <div class="pk__savings">
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> YOU SAVE $240!</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> BIGGEST DISCOUNT</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> 60 DAYS GUARANTEE</div>
+                      </div>
+                      <span class="pk__btn"><span><svg viewBox="0 0 24 24">
+                            <path
+                              d="M7 18a2 2 0 102 2 2 2 0 00-2-2zm10 0a2 2 0 102 2 2 2 0 00-2-2zM7.2 14.8l.03.2H19v-2H8.5l-.5-3H21l-2-7H5.2L4.3 0H1v2h2l3.6 12z">
+                            </path>
+                          </svg> Add to Cart</span></span>
+                      <img decoding="async" class="pk__flags" src="images/9_cards_0c51b8caa3a3.webp" alt="Cards"
+                        loading="lazy">
+                      <div class="pk__totals">Total: <s>$447</s><b>$207</b></div>
+                      <p class="pk__shipping">+ <span>FREE</span> SHIPPING</p>
+                    </div>
+                  </a>
+                  <a class="pk__item pk--promo buylink" href="#" data-click-path="/click/2" data-kit="6">
+                    <div class="pk__wrap">
+                      <div class="pk__header">BEST VALUE!</div>
+                      <div class="pk__offer"><b>BUY 3 GET + 3 FREE</b><span>180 DAY SUPPLY</span></div>
+                      <img decoding="async" class="pk__img" src="images/6-bottles.webp" alt="6 Bottles" loading="lazy">
+                      <div class="pk__price"><b><sup>$</sup>49</b><span>PER<br>BOTTLE</span></div>
+                      <div class="pk__savings">
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> YOU SAVE $600!</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> BIGGEST DISCOUNT</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> 60 DAYS GUARANTEE</div>
+                      </div>
+                      <span class="pk__btn"><span><svg viewBox="0 0 24 24">
+                            <path
+                              d="M7 18a2 2 0 102 2 2 2 0 00-2-2zm10 0a2 2 0 102 2 2 2 0 00-2-2zM7.2 14.8l.03.2H19v-2H8.5l-.5-3H21l-2-7H5.2L4.3 0H1v2h2l3.6 12z">
+                            </path>
+                          </svg> Add to Cart</span></span>
+                      <img decoding="async" class="pk__flags" src="images/7_cards-dark_952aa2fcb1f7.webp" alt="Cards"
+                        loading="lazy">
+                      <div class="pk__totals">Total: <s>$894</s><b>$294</b></div>
+                      <p class="pk__shipping">+ <span>FREE</span> SHIPPING</p>
+                    </div>
+                  </a>
+                  <a class="pk__item buylink" href="#" data-click-path="/click/1" data-kit="2">
+                    <div class="pk__wrap">
+                      <div class="pk__header">BASIC</div>
+                      <div class="pk__offer"><b>2 BOTTLES</b><span>60 DAY SUPPLY</span></div>
+                      <img decoding="async" class="pk__img" src="images/2-bottles.webp" alt="2 Bottles" loading="lazy">
+                      <div class="pk__price"><b><sup>$</sup>79</b><span>PER<br>BOTTLE</span></div>
+                      <div class="pk__savings">
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> YOU SAVE $140!</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> BIGGEST DISCOUNT</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> 60 DAYS GUARANTEE</div>
+                      </div>
+                      <span class="pk__btn"><span><svg viewBox="0 0 24 24">
+                            <path
+                              d="M7 18a2 2 0 102 2 2 2 0 00-2-2zm10 0a2 2 0 102 2 2 2 0 00-2-2zM7.2 14.8l.03.2H19v-2H8.5l-.5-3H21l-2-7H5.2L4.3 0H1v2h2l3.6 12z">
+                            </path>
+                          </svg> Add to Cart</span></span>
+                      <img decoding="async" class="pk__flags" src="images/9_cards_0c51b8caa3a3.webp" alt="Cards"
+                        loading="lazy">
+                      <div class="pk__totals">Total: <s>$298</s><b>$158</b></div>
+                      <p class="pk__shipping">+ SHIPPING</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+      </section>
+    </div>
+
+    <section class="page-section">
+      <div class="page-section__inner">
+        <div class="content-block">
+          <div class="fbc2">
+            <div class="fbc2__header">36,158 Comments</div>
+            <div class="fbc2__box">
+              <div class="fbc2__c">
+                <div class="fbc2__avatar"><img decoding="async" src="images/80.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Sophie Robinson</div>
+                    <div class="fbc2__text">Wait what's the actual ritual? Do I need to watch the whole thing?</div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">21</span>
+                    </div>
+                  </div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">2h</span></div>
+                </div>
+              </div>
+              <div class="fbc2__c fbc2__c--reply">
+                <div class="fbc2__avatar"><img decoding="async" src="images/81.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Victoria Carter</div>
+                    <div class="fbc2__text">yeah Linda breaks it down early on. Worth watching tbh</div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">18</span>
+                    </div>
+                  </div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">1h</span></div>
+                </div>
+              </div>
+              <div class="fbc2__c">
+                <div class="fbc2__avatar"><img decoding="async" src="images/82.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Lisa G.</div>
+                    <div class="fbc2__text">Ngl I only watched cause of the CNN story but the arterial cement thing
+                      actually makes sense when she breaks down the science. Def gonna try it <img draggable="false"
+                        role="img" class="emoji" alt="ðŸ‘€" src="images/1f440.svg"></div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">46</span>
+                    </div>
+                  </div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">1h</span></div>
+                </div>
+              </div>
+              <div class="fbc2__c">
+                <div class="fbc2__avatar"><img decoding="async" src="images/83.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Madison Scott</div>
+                    <div class="fbc2__text">3 weeks in and my cardiologist asked if I changed meds <img
+                        draggable="false" role="img" class="emoji" alt="ðŸ˜‚" src="images/1f602.svg"> nope just the
+                      arterial flush apparently</div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">63</span>
+                    </div>
+                  </div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">55 min</span></div>
+                </div>
+              </div>
+              <div class="fbc2__c">
+                <div class="fbc2__avatar"><img decoding="async" src="images/84.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Charlotte Williams</div>
+                    <div class="fbc2__text">Ok I almost scrolled past this but I'm glad I didn't. Started the arterial
+                      flush 2 weeks ago and my morning readings are already down. Not saying it's magic but something
+                      is
+                      definitely working</div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">58</span>
+                    </div>
+                  </div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">40 min</span></div>
+                </div>
+              </div>
+              <div class="fbc2__c">
+                <div class="fbc2__avatar"><img decoding="async" src="images/85.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Daisy Collins</div>
+                    <div class="fbc2__text">Is this actually legit or just another internet thing??</div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">14</span>
+                    </div>
+                  </div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">32 min</span></div>
+                </div>
+              </div>
+              <div class="fbc2__c fbc2__c--reply">
+                <div class="fbc2__avatar"><img decoding="async" src="images/86.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Emily Lewis</div>
+                    <div class="fbc2__text">I literally said the same thing lol. Try it for a week and see. My
+                      headaches
+                      went away first and now my pressure is at 122/80 every morning. Hadn't seen numbers like that in
+                      years</div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">35</span>
+                    </div>
+                  </div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">28 min</span></div>
+                </div>
+              </div>
+              <div class="fbc2__c">
+                <div class="fbc2__avatar"><img decoding="async" src="images/87.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Olivia Martinez</div>
+                    <div class="fbc2__text">I've tried Losartan, Lisinopril, Amlodipineâ€¦ this is the first time my
+                      pressure actually stays down. The chest tightness just kinda stopped? Idk how to explain</div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">49</span>
+                    </div>
+                  </div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">20 min</span></div>
+                </div>
+              </div>
+              <div class="fbc2__c">
+                <div class="fbc2__avatar"><img decoding="async" src="images/88.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Emma Clark</div>
+                    <div class="fbc2__text">2 months in. went from 178/108 down to 121/79. off losartan too. i'm
+                      honestly confused how this isn't bigger news <img draggable="false" role="img" class="emoji"
+                        alt="🤷‍♀️" src="images/1f937-200d-2640-fe0f.svg"></div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">72</span>
+                    </div>
+                  </div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">just now</span></div>
+                </div>
+              </div>
+              <div class="fbc2__footer">This post is no longer receiving comments!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    (function () {
+      var storageKey = 'bloodPrilBottlesLeft';
+      var counterIds = ['fbctaCounter', 'ns1counter', 'ns2counter'];
+      var savedValue = sessionStorage.getItem(storageKey)
+        || sessionStorage.getItem('fbctaBottlesLeft')
+        || sessionStorage.getItem('ns1BottlesLeft')
+        || sessionStorage.getItem('ns2BottlesLeft');
+      var count = parseInt(savedValue, 10);
+
+      if (isNaN(count)) count = Math.floor(Math.random() * 30) + 200;
+      if (count < 37) count = 37;
+
+      function renderCounters() {
+        counterIds.forEach(function (id) {
+          var counter = document.getElementById(id);
+          if (counter) counter.textContent = count;
+        });
+      }
+
+      sessionStorage.setItem(storageKey, count);
+      renderCounters();
+
+      setInterval(function () {
+        count = parseInt(sessionStorage.getItem(storageKey), 10);
+        if (isNaN(count) || count < 37) count = 37;
+
+        if (count > 37 && Math.random() > 0.7) {
+          count -= 1;
+          sessionStorage.setItem(storageKey, count);
+        }
+
+        renderCounters();
+      }, 30000);
+
+      document.querySelectorAll('.ns2__faq-q').forEach(function (button) {
+        button.addEventListener('click', function () {
+          var item = button.closest('.ns2__faq-item');
+          if (item) item.classList.toggle('ns2--open');
+        });
+      });
+    })();
+  </script>
+
+  <script>
+    (function () { 'use strict'; if (!window.location.search) return; function p() { try { document.querySelectorAll('a[href],button[onclick]').forEach(function (el) { try { if (!el.href || el.href.startsWith('#') || el.href.startsWith('javascript:') || el.href.startsWith('mailto:') || el.href.startsWith('tel:')) return; const url = new URL(el.href, window.location.origin); if (url.origin !== window.location.origin) return; const params = new URLSearchParams(window.location.search); params.forEach(function (v, k) { if (k && v && !url.searchParams.has(k)) url.searchParams.set(k, v) }); el.href = url.toString() } catch (e) { } }) } catch (e) { } } p(); if (window.MutationObserver) { const o = new MutationObserver(function (m) { let u = false; m.forEach(function (n) { if (n.addedNodes.length) u = true }); if (u) p() }); o.observe(document.body, { childList: true, subtree: true }) } })();
+  </script>
+
+  <script>
+    // Detecta o domínio atual e atualiza os links dinamicamente
+    (function () {
+      const currentDomain = window.location.hostname;
+      let urlParams = window.location.search;
+      try {
+        if (window.parent && window.parent.location && window.parent.location.search) {
+          urlParams = window.parent.location.search;
+        }
+      } catch (e) {
+        console.warn("Acesso ao window.parent bloqueado (cross-origin).");
+      }
+      const baseUrl = currentDomain ? 'https://lp.' + currentDomain : 'https://lp.formandmomentum.com';
+      document.querySelectorAll('a[data-click-path]').forEach(link => {
+        const clickPath = link.getAttribute('data-click-path');
+        link.href = baseUrl + clickPath + urlParams;
+      });
+    })();
+  </script>
+</body>
+
+</html>
