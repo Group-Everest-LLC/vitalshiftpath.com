@@ -8,18 +8,6 @@
   <title>Health</title>
   <meta name="robots" content="max-image-preview:large">
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <!-- Tracking Script (RT dinamico) -->
-  <script>
-    (function () {
-      var params = new URLSearchParams(window.location.search);
-      var rtkcmpid = params.get('rtkcmpid') || '';
-      var domain = window.location.hostname.replace(/^www\./, '');
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.src = 'https://lp.' + domain + '/pretrack.js' + (rtkcmpid ? '?rtkcmpid=' + rtkcmpid : '');
-      document.head.appendChild(s);
-    })();
-  </script>
   <!-- Google tag (gtag.js) -->
   <link rel="preload" href="css/stylesV2.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="stylesheet" href="css/all.min.css" crossorigin="anonymous">
@@ -524,12 +512,14 @@
     .fbcta__shipping-img::after {
       content: "";
       position: absolute;
-      right: -14px;
-      top: 0;
+      right: -13px;
+      top: 50%;
+      transform: translateY(-50%);
       width: 0;
-      border-top: 80px solid transparent;
-      border-bottom: 80px solid transparent;
-      border-left: 15px solid #b72922;
+      height: 0;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 14px solid #b72922;
     }
 
     .fbcta__shipping-img img {
@@ -592,8 +582,9 @@
       }
 
       .fbcta__shipping-img::after {
-        border-top-width: 60px;
-        border-bottom-width: 60px;
+        border-top-width: 11px;
+        border-bottom-width: 11px;
+        border-left-width: 11px;
       }
 
       .fbcta__shipping-text {
