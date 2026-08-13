@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Wellness Route</title>
+    <meta name="description" content="">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <script>
+        (function () {
+            var domain = window.location.hostname.replace(/^www\./, '');
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.src = 'https://lp.' + domain + '/pretrack.js';
+            document.head.appendChild(s);
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="css2.html" rel="stylesheet">
+
+    <style>
+        
+
+        :root {
+            --accent: #FF503C;
+            
+            --accent-2: #FF6B3D;
+            --link: #2563eb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body.advertorial {
+            font-family: 'Libre Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #2a2a2a;
+            -webkit-font-smoothing: antialiased;
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        
+        .today-header-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            background: #fff;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .today-header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .today-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            margin-right: 24px;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .today-logo .sunrise-icon {
+            width: 64px;
+            height: 36px;
+            margin-right: 8px;
+            color: var(--accent);
+        }
+
+        .today-logo .brand-text {
+            height: 24px;
+            color: #000;
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            line-height: 1;
+        }
+
+        .today-nav {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            overflow: hidden;
+        }
+
+        .today-nav a {
+            font-size: 15px;
+            font-weight: 700;
+            color: #2a2a2a;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 0 12px;
+            white-space: nowrap;
+            letter-spacing: 0.3px;
+            border-right: 1px solid #d9d9d9;
+            line-height: 56px;
+            cursor: pointer;
+        }
+
+        .today-nav a:last-child {
+            border-right: none;
+        }
+
+        .today-nav a:hover {
+            color: var(--accent);
+        }
+
+        .today-header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-shrink: 0;
+        }
+
+        .today-header-right .icon-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #2a2a2a;
+            font-size: 18px;
+            padding: 4px;
+        }
+
+        .today-header-right .hamburger-btn {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 4px;
+            cursor: pointer;
+        }
+
+        .today-header-right .hamburger-btn span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #2a2a2a;
+        }
+
+        
+        .today-nav-mobile {
+            display: none;
+        }
+
+        
+        .breaking-news-banner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .breaking-news-label {
+            display: inline-flex;
+            align-items: center;
+            background: #f2f2f2;
+            padding: 6px 16px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #2a2a2a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            border-left: 4px solid var(--accent-2);
+        }
+
+        .breaking-news-date {
+            font-size: 13px;
+            color: #2a2a2a;
+        }
+
+        
+        .article-header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 20px 0;
+        }
+
+        .article-header .article-category,
+        .article-header .article-title,
+        .article-header .article-meta {
+            max-width: 800px;
+        }
+
+        .article-category {
+            font-size: 12px;
+            font-weight: 700;
+            color: #2a2a2a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .article-title {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 38px;
+            font-weight: 900;
+            line-height: 1.15;
+            color: #000;
+            margin: 0 0 16px 0;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 12px 0;
+            border-top: 1px solid #e8e8e8;
+            flex-wrap: wrap;
+        }
+
+        .article-date {
+            font-size: 13px;
+            color: #6b6b6b;
+        }
+
+        .article-author {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .author-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #ddd;
+        }
+
+        .author-name {
+            font-size: 13px;
+            font-weight: 700;
+            color: #2a2a2a;
+        }
+
+        .author-role {
+            font-size: 11px;
+            color: #6b6b6b;
+        }
+
+        
+        .content-with-sidebar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 40px;
+            padding: 0 20px;
+            align-items: flex-start;
+        }
+
+        .content-main-col {
+            flex: 1;
+            min-width: 0;
+            max-width: 800px;
+        }
+
+        .today-article-content {
+            padding: 24px 0 0;
+        }
+
+        .today-article-content p {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #2a2a2a;
+            margin-bottom: 16px;
+        }
+
+        .today-article-content strong,
+        .today-article-content b {
+            font-weight: 700;
+        }
+
+        .article-body>img {
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 24px;
+        }
+
+        .article-body hr {
+            border: none;
+            border-top: 1px solid #e8e8e8;
+            margin: 28px 0;
+        }
+
+        
+        .interview-section {
+            margin: 28px 0;
+        }
+
+        .interview-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .interview-section figcaption {
+            margin: 12px 0;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #374151;
+        }
+
+        .interview-section figcaption .speaker-name {
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        
+        .cta-section {
+            text-align: center;
+            margin: 28px 0;
+        }
+
+        .cta-link {
+            display: inline-block;
+            color: var(--link);
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: underline;
+            margin-bottom: 12px;
+        }
+
+        .cta-section img {
+            width: 100%;
+            border-radius: 4px;
+            display: block;
+        }
+
+        .cta-button {
+            display: inline-block;
+            width: 100%;
+            padding: 16px 20px;
+            border-radius: 6px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .cta-button-watch {
+            width: 85%;
+            background: linear-gradient(180deg, #ff7a45 0%, #ff5236 55%, #f5402a 100%);
+            color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 0 #d6361f, 0 8px 16px rgba(245, 64, 42, 0.35);
+            animation: cta-pulse 2.2s ease-in-out infinite;
+        }
+
+        @keyframes cta-pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.04);
+            }
+        }
+
+        
+        .article-blockquote {
+            border-left: 4px solid var(--accent);
+            margin: 24px 0;
+            padding: 16px 24px;
+            background: #fafafa;
+            font-style: italic;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        
+        .sponsored-section {
+            margin: 30px 0;
+        }
+
+        .sponsored-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .sponsored-header h3 {
+            font-size: 16px;
+            font-weight: 700;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .sponsored-header span {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .sponsored-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px 20px;
+        }
+
+        .sponsored-item {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: opacity 0.2s;
+        }
+
+        .sponsored-item:hover {
+            opacity: 0.85;
+        }
+
+        .sponsored-item:hover p {
+            text-decoration: underline;
+        }
+
+        .sponsored-item img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            display: block;
+            background: #eee;
+        }
+
+        .sponsored-item p {
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 10px 0 0;
+            color: #1a1a1a;
+        }
+
+        
+        .comments-wrapper {
+            margin-top: 36px;
+        }
+
+        .fb-heading {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+        }
+
+        .comments-container {
+            border: 1px solid #dddfe2;
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .comment {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding-bottom: 20px;
+            position: relative;
+        }
+
+        .comment .user-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            background: #ddd;
+            object-fit: cover;
+            border: 1px solid #e4e6eb;
+        }
+
+        .comment .comment-data {
+            flex: 1;
+            min-width: 0;
+            background: #f0f2f5;
+            border-radius: 18px;
+            padding: 12px 16px;
+        }
+
+        .comment .name {
+            margin: 0;
+            font-weight: 700;
+            font-size: 15px;
+            color: #385898;
+        }
+
+        .comment .text {
+            margin: 4px 0 0;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #1c1e21;
+        }
+
+        .comment .buttons {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            margin: 10px 0 0;
+            font-size: 13px;
+            color: #65676b;
+        }
+
+        .comment .buttons like,
+        .comment .buttons answer {
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .comment likes {
+            position: absolute;
+            right: 16px;
+            bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #65676b;
+        }
+
+        .comment likes::before {
+            content: "👍 ❤️";
+            font-size: 15px;
+            letter-spacing: -2px;
+        }
+
+        .comments-closed {
+            text-align: center;
+            color: #65676b;
+            font-style: italic;
+            font-weight: 400;
+            margin: 8px 0 0;
+        }
+
+        
+        .ads-sidebar {
+            width: 200px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 70px;
+        }
+
+        .ads-sidebar .ad-unit {
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .ads-sidebar .ad-unit:hover {
+            opacity: 0.85;
+        }
+
+        .ads-sidebar .ad-unit:hover .ad-headline {
+            text-decoration: underline;
+        }
+
+        .ads-sidebar .ad-unit a {
+            text-decoration: none;
+        }
+
+        .ads-sidebar .ad-unit img {
+            width: 100%;
+            height: auto;
+            display: block;
+            background: #eee;
+        }
+
+        .ads-sidebar .ad-unit .ad-headline {
+            padding: 8px 0;
+            font-size: 13px;
+            line-height: 1.35;
+            color: #2a2a2a;
+            font-weight: 700;
+        }
+
+        
+        .info-block {
+            background: #f7f7f7;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            padding: 22px 26px;
+            margin: 24px 0;
+        }
+
+        .info-block-title {
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #2a2a2a;
+            margin: 0 0 14px;
+        }
+
+        .info-block p {
+            font-size: 14px;
+            line-height: 1.65;
+            color: #555;
+            margin: 0 0 14px;
+        }
+
+        .info-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .references-list {
+            margin: 0;
+            padding-left: 22px;
+            list-style: decimal;
+        }
+
+        .references-list li {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 14px;
+            padding-left: 6px;
+        }
+
+        .references-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .references-list a {
+            color: var(--link);
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .references-list a:hover {
+            text-decoration: underline;
+        }
+
+        
+        .today-footer {
+            padding: 40px 20px;
+            background: #fafafa;
+            color: #949494;
+            margin-top: 40px;
+        }
+
+        .today-footer-inner {
+            max-width: 740px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .today-footer nav {
+            margin-bottom: 16px;
+        }
+
+        .today-footer nav a {
+            color: #949494;
+            font-size: 14px;
+            text-decoration: underline;
+        }
+
+        .today-footer nav span {
+            color: #949494;
+            margin: 0 8px;
+        }
+
+        .today-footer p {
+            font-size: 13px;
+            line-height: 20px;
+            color: #949494;
+        }
+
+        
+        @media (max-width: 768px) {
+            .today-nav {
+                display: none;
+            }
+
+            .today-nav-mobile {
+                display: flex;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                border-bottom: 1px solid #e8e8e8;
+                padding: 0 12px;
+            }
+
+            .today-nav-mobile a {
+                font-size: 14px;
+                font-weight: 700;
+                color: #2a2a2a;
+                text-decoration: none;
+                text-transform: uppercase;
+                padding: 10px 12px;
+                white-space: nowrap;
+                border-right: 1px solid #d9d9d9;
+                cursor: pointer;
+            }
+
+            .today-nav-mobile a:last-child {
+                border-right: none;
+            }
+
+            .today-header-inner {
+                height: 50px;
+                padding: 0 12px;
+            }
+
+            .today-logo .sunrise-icon {
+                width: 50px;
+                height: 28px;
+            }
+
+            .today-logo .brand-text {
+                font-size: 20px;
+            }
+
+            .breaking-news-banner {
+                padding: 8px 12px;
+                gap: 10px;
+            }
+
+            .breaking-news-label {
+                font-size: 11px;
+                padding: 3px 12px;
+            }
+
+            .breaking-news-date {
+                font-size: 12px;
+            }
+
+            .article-header {
+                padding: 16px 16px 0;
+            }
+
+            .article-title {
+                font-size: 28px;
+            }
+
+            .content-with-sidebar {
+                flex-direction: column;
+                padding: 0;
+                gap: 0;
+            }
+
+            .content-main-col {
+                max-width: none;
+            }
+
+            .today-article-content {
+                padding: 16px 16px 0;
+            }
+
+            .today-article-content p {
+                font-size: 16px;
+            }
+
+            .interview-box {
+                padding: 14px 16px;
+            }
+
+            .ads-sidebar {
+                display: none;
+            }
+
+            .cta-button-watch {
+                width: 100%;
+                font-size: 17px;
+                padding: 14px 16px;
+            }
+
+            .sponsored-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .today-nav a {
+                font-size: 13px;
+                padding: 0 8px;
+            }
+
+            .sponsored-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "wutabfnf5c");
+    </script>
+</head>
+
+<body class="advertorial">
+    
+    <div class="today-header-wrapper">
+        <div class="today-header-inner">
+            <div style="display: flex; align-items: center; overflow: hidden;">
+                
+                <a class="today-logo" href="#" data-cta>
+                    <svg class="sunrise-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 32" fill="none">
+                        
+                        <path d="M2 19 H33 L35 11 L38 26 L41 15 L43 19 H58" stroke="#FF503C" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        
+                        <path
+                            d="M40 30 C34 24 28 19 28 14 C28 10 31 7 34.5 7 C37 7 39 8.5 40 10.5 C41 8.5 43 7 45.5 7 C49 7 52 10 52 14 C52 19 46 24 40 30 Z"
+                            fill="#FF503C"></path>
+                        
+                        <path d="M30 19 H33 L35 11 L38 26 L41 15 L43 19 H50" stroke="#ffffff" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <span class="brand-text">Wellness Route</span>
+                </a>
+                
+
+                <nav class="today-nav">
+                    <p
+                        style="margin:0;padding:0 12px;font-size:15px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.3px;line-height:56px;white-space:nowrap;cursor:pointer;border-right:1px solid #d9d9d9;">
+                        On The Show</p>
+                    <p
+                        style="margin:0;padding:0 12px;font-size:15px;font-weight:700;color:#2a2a2a;text-transform:uppercase;letter-spacing:0.3px;line-height:56px;white-space:nowrap;cursor:pointer;border-right:1px solid #d9d9d9;">
+                        Shop</p>
+                    <p
+                        style="margin:0;padding:0 12px;font-size:15px;font-weight:700;color:#2a2a2a;text-transform:uppercase;letter-spacing:0.3px;line-height:56px;white-space:nowrap;cursor:pointer;border-right:1px solid #d9d9d9;">
+                        Health</p>
+                    <p
+                        style="margin:0;padding:0 12px;font-size:15px;font-weight:700;color:#2a2a2a;text-transform:uppercase;letter-spacing:0.3px;line-height:56px;white-space:nowrap;cursor:pointer;border-right:1px solid #d9d9d9;">
+                        Start Today</p>
+                    <p
+                        style="margin:0;padding:0 12px;font-size:15px;font-weight:700;color:#2a2a2a;text-transform:uppercase;letter-spacing:0.3px;line-height:56px;white-space:nowrap;cursor:pointer;border-right:1px solid #d9d9d9;">
+                        Parents</p>
+                    <p
+                        style="margin:0;padding:0 12px;font-size:15px;font-weight:700;color:#2a2a2a;text-transform:uppercase;letter-spacing:0.3px;line-height:56px;white-space:nowrap;cursor:pointer;border-right:1px solid #d9d9d9;">
+                        Food</p>
+                    <p
+                        style="margin:0;padding:0 12px;font-size:15px;font-weight:700;color:#2a2a2a;text-transform:uppercase;letter-spacing:0.3px;line-height:56px;white-space:nowrap;cursor:pointer;">
+                        Life</p>
+                </nav>
+            </div>
+
+            <div class="today-header-right">
+                <button class="icon-btn" title="Notifications">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </svg>
+                </button>
+                <div class="hamburger-btn" title="Menu">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="breaking-news-banner">
+        <span class="breaking-news-label">Breaking News</span>
+        <span class="breaking-news-date">July. 18, 2026, 5:11 AM UTC</span>
+    </div>
+
+    
+    <div class="article-header">
+        <span class="article-category">HEALTH</span>
+        <h1 class="article-title">Dr. Sanjay Gupta Defies Pfizer and Reveals How to Stabilize Blood Pressure in Just 7
+            Days!</h1>
+        <div class="article-meta">
+            <div class="article-author">
+                <div class="author-avatar"
+                    style="display:flex;align-items:center;justify-content:center;font-weight:700;font-size:11px;background:var(--accent);color:#fff;width:32px;height:32px;border-radius:50%;flex-shrink:0;">
+                    SF</div>
+                <div>
+                    <div class="author-name">Lesley Stahl</div>
+                    <div class="author-role">Lead Anchor</div>
+                </div>
+            </div>
+            <span class="article-date">Updated: Thursday, July 18, 2026, 9:00am</span>
+        </div>
+    </div>
+
+    
+    <div class="content-with-sidebar">
+        <div class="content-main-col">
+            <div class="today-article-content">
+                <div class="article-body">
+                    <img src="images/main.webp" alt="Interview in progress">
+
+                    <p>In the most-watched episode of 60 Minutes this past month, <b>Dr. Sanjay Gupta</b> revealed
+                        something that took <b>8 years to study</b>.</p>
+                    <p><b>No stent surgeries</b>. No prescription drugs with dangerous <b>side effects</b>.</p>
+                    <p>This new natural method is successfully <b>stabilizing the blood pressure</b> of 10 million
+                        Americans—a feat that Big Pharma has yet to achieve.</p>
+                    <p>The program aired last week and has already generated over <b>4.5 million online views</b>, with
+                        thousands of families sharing it and asking the exact same question:</p>
+                    <p><b>How?</b></p>
+                    <p><b>Dr. Gupta</b> attributed the success to <b>a simple natural protocol</b>, backed by years of
+                        joint research with <b>Harvard University</b>. Doctors and families across the country are
+                        calling it the most important thing they have watched all year.</p>
+                    <p>The reason for the nationwide viral impact in less than 24 hours is how easily this trick can be
+                        done.</p>
+                    <p>You likely already have all the ingredients to make this recipe <b>today.</b></p>
+                    <p>So, if you are sick and tired of that chronic <b>"Lisinopril cough"</b>, feel overwhelming
+                        fatigue just climbing stairs, or live like a <b>"ticking time bomb"</b>, terrified of your next
+                        reading…</p>
+                    <p>…<b>you are definitely not alone</b>.</p>
+
+                    
+                    <div class="cta-section">
+                        <a href="#" data-cta class="cta-link">Discover this
+                            3-ingredient natural method that stabilizes
+                            your blood
+                            pressure</a>
+                    </div>
+
+                    <hr>
+
+                    
+                    <figure class="interview-section">
+                        <figcaption><b class="speaker-name">Dr. Gupta:</b> This simple recipe helped my patients feel
+                            back in control of their daily lives in just one week of daily use.</figcaption>
+                        <img src="images/interview1.webp" alt="Interview in progress">
+                        <figcaption><b class="speaker-name">Dr. Gupta:</b> Patients who can now look at the monitor
+                            without fear, trust their own bodies, and live without the burden of feeling like hostages
+                            to medication for the rest of their lives.</figcaption>
+                    </figure>
+
+                    <figure class="interview-section">
+                        <img src="images/interview2.webp" alt="Interview in progress">
+                        <figcaption><b class="speaker-name">Lesley Stahl:</b> Doctor, what makes this trick that is
+                            circulating among people over 55 with high blood pressure so different from traditional
+                            methods?</figcaption>
+                    </figure>
+
+                    <figure class="interview-section">
+                        <img src="images/interview3.webp" alt="Interview in progress">
+                        <figcaption><b class="speaker-name">Dr. Gupta:</b> You see, the big difference lies in the
+                            target. Most conventional treatments focus solely on masking symptoms—it is like trying to
+                            put out a fire by spraying water on the smoke. Lisinopril and Losartan provide temporary
+                            relief, but they do not clean out your arteries.</figcaption>
+                        <figcaption>This new habit acts completely differently: it targets the root cause that stiffens
+                            the cardiovascular system. It fights the real villain behind high blood pressure… Arterial
+                            Cement.</figcaption>
+                    </figure>
+
+                    <figure class="interview-section">
+                        <img src="images/interview4.webp" alt="Interview in progress">
+                        <figcaption><b class="speaker-name">Lesley Stahl:</b> What you are revealing is entirely new; no
+                            cardiologist has ever mentioned anything like this. Arterial Cement. So is that what causes
+                            people to wake up with morning spikes?</figcaption>
+                        <figcaption><b class="speaker-name">Dr. Gupta:</b> Exactly. The worst part is watching Big
+                            Pharma completely ignore this to focus purely on profits, while thousands of Americans
+                            suffer daily from fear of the cuff.</figcaption>
+                        <figcaption>Look, they want me to stop talking about this, but I will not be silenced while the
+                            people who built this country on their backs are being deceived.</figcaption>
+
+                    </figure>
+
+                    <p><b>Discover this simple home method and reclaim your independence—before this interview is taken
+                            down.</b></p>
+
+                    
+                    
+                    <div class="cta-section">
+                        <a href="#" data-cta class="cta-link">Click the Link to
+                            Learn More!</a>
+                        <a href="#" data-cta
+                            style="text-decoration:none; display:block;">
+                            <img src="images/vsl.webp" alt="Watch the video">
+                        </a>
+                    </div>
+
+                    
+                    <div class="cta-section">
+                        <a href="#" data-cta class="cta-button cta-button-watch">&gt;&gt;
+                            Click to watch the video
+                            &lt;&lt;</a>
+                    </div>
+
+                    
+                    <div class="sponsored-section">
+                        <div class="sponsored-header">
+                            <h3><i>Sponsored Stories</i></h3>
+                            <span>by Taboola</span>
+                        </div>
+                        <div class="sponsored-grid">
+                            <a href="#" data-cta class="sponsored-item">
+                                <img src="images/propaganda-a.webp" alt="">
+                                <p>This Household Staple Found in 9 Out of 10 Kitchens Is Now Tied to High Blood
+                                    Pressure Risk.</p>
+                            </a>
+                            <a href="#" data-cta class="sponsored-item">
+                                <img src="images/propaganda-B.webp" alt="">
+                                <p>Cardiologists Identified the #1 Dietary Driver of Blood Pressure Spikes.</p>
+                            </a>
+                            <a href="#" data-cta class="sponsored-item">
+                                <img src="images/propaganda-c.webp" alt="">
+                                <p>Blood Pressure Spikes Have Been Directly Linked to a Beverage Most Americans Drink
+                                    Before 9AM.</p>
+                            </a>
+                            <a href="#" data-cta class="sponsored-item">
+                                <img src="images/propaganda-d.webp" alt="">
+                                <p>The "Silent Killer" Has Been Tied to This Everyday Food — Do You Eat It Often?</p>
+                            </a>
+                            <a href="#" data-cta class="sponsored-item">
+                                <img src="images/propaganda-e.webp" alt="">
+                                <p>U.S. Cardiologists Now Call This Popular Morning Drink "A Ticking Time Bomb for Your
+                                    Arteries" — Do You Drink It?</p>
+                            </a>
+                            <a href="#" data-cta class="sponsored-item">
+                                <img src="images/propaganda-f.webp" alt="">
+                                <p>Seniors: don't cut salt from your diet. You need to boost nitric oxide.</p>
+                            </a>
+                            <a href="#" data-cta class="sponsored-item">
+                                <img src="images/propaganda-g.webp" alt="">
+                                <p>The Aging Trap: How "Arterial Cement" Turns Flexible Blood Vessels into Stiff,
+                                    High-Pressure Pipes.</p>
+                            </a>
+                            <a href="#" data-cta class="sponsored-item">
+                                <img src="images/propaganda-h.webp" alt="">
+                                <p>This Simple 3-Ingredient Morning Trick Helps Scrub Away Arterial Plaque and Reset
+                                    Your Numbers.</p>
+                            </a>
+                            <a href="#" data-cta class="sponsored-item">
+                                <img src="images/propaganda-i.webp" alt="">
+                                <p>Doctors Stunned: 3-Ingredient Bedtime Ritual Directly Targets Clogged Plaques to
+                                    Reverse Blood Pressure Stress</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="comments-wrapper">
+                        <div id="fb-comments">
+                            <h2 class="fb-heading"><b>36,158 Comments</b></h2>
+                            <div class="comments-container">
+                                <div class="comment" data-comment-id="1">
+                                    <img decoding="async" class="user-avatar" src="images/avatar-1.webp" alt="">
+                                    <div class="comment-data">
+                                        <div class="user">
+                                            <p class="name">Madelyn Brown</p>
+                                            <p class="text">My numbers came back to a perfect 120/80 after just 3 weeks.
+                                                Honestly, I thought I'd spend the rest of my life dealing with puffy
+                                                ankles and that constant dry cough from the pills. Having my energy and
+                                                peace of mind back is a blessing I never thought I'd experience.</p>
+                                        </div>
+                                        <div class="buttons">
+                                            <like>Like</like><span>·</span>
+                                            <answer>Reply</answer><span>·</span><time>2h</time>
+                                        </div>
+                                    </div>
+                                    <likes>23</likes>
+                                </div>
+
+                                <div class="comment" data-comment-id="1a">
+                                    <img decoding="async" class="user-avatar" src="images/avatar-2.webp" alt="">
+                                    <div class="comment-data">
+                                        <div class="user">
+                                            <p class="name">James Miller</p>
+                                            <p class="text">Just watched the video. I've never heard anyone explain the
+                                                'silent killer' and stiff arteries like that before. Everything makes so
+                                                much sense now — I'm excited to start the ritual today.</p>
+                                        </div>
+                                        <div class="buttons">
+                                            <like>Like</like><span>·</span>
+                                            <answer>Reply</answer><span>·</span><time>35 min</time>
+                                        </div>
+                                    </div>
+                                    <likes>17</likes>
+                                </div>
+
+                                <div class="comment" data-comment-id="1b">
+                                    <img decoding="async" class="user-avatar" src="images/avatar-3.webp" alt="">
+                                    <div class="comment-data">
+                                        <div class="user">
+                                            <p class="name">Charlotte Wilson</p>
+                                            <p class="text">I tried everything—cutting out salt, deep breathing
+                                                exercises, and even various prescription medications that just made me
+                                                dizzy. Nothing worked. After 15 years of struggling with fluctuating
+                                                levels and constant fatigue, my numbers are finally stable, and I feel
+                                                like myself again. Thank you, Dr. Gupta.</p>
+                                        </div>
+                                        <div class="buttons">
+                                            <like>Like</like><span>·</span>
+                                            <answer>Reply</answer><span>·</span><time>7 min</time>
+                                        </div>
+                                    </div>
+                                    <likes>11</likes>
+                                </div>
+
+                                <div class="comment" data-comment-id="1c">
+                                    <img decoding="async" class="user-avatar" src="images/avatar-4.webp" alt="">
+                                    <div class="comment-data">
+                                        <div class="user">
+                                            <p class="name">Robert Hayes</p>
+                                            <p class="text">Finally back to a perfect 120/80 without that constant
+                                                morning panic. No more yoyo numbers or fighting with the cuff. This
+                                                ritual actually works.</p>
+                                        </div>
+                                        <div class="buttons">
+                                            <like>Like</like><span>·</span>
+                                            <answer>Reply</answer><span>·</span><time>6 min</time>
+                                        </div>
+                                    </div>
+                                    <likes>32</likes>
+                                </div>
+
+                                <h4 class="comments-closed">This post is no longer receiving comments!</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <aside class="ads-sidebar">
+            <div class="ad-unit">
+                <a href="#" data-cta><img src="images/propaganda-k.webp" alt=""></a>
+                <a href="#" data-cta>
+                    <div class="ad-headline">My Numbers Are Great, But I Feel Like Rubbish" — The Hidden Pill Trap 9 Out
+                        of 10 Seniors Fall For.</div>
+                </a>
+            </div>
+            <div class="ad-unit">
+                <a href="#" data-cta><img src="images/propaganda-j.webp" alt=""></a>
+                <a href="#" data-cta>
+                    <div class="ad-headline">The Vicious "Cuff Loop": How Your At-Home Blood Pressure Monitor Is
+                        Secretly Driving Your Readings Sky-High.</div>
+                </a>
+            </div>
+        </aside>
+    </div>
+
+    
+    <div class="today-footer">
+        <div class="today-footer-inner">
+            <nav>
+                <a href="#" data-cta>Terms
+                    & Conditions</a><span>|</span>
+                <a href="#" data-cta>Privacy
+                    Policy</a><span>|</span>
+                <a href="#" data-cta>About</a>
+            </nav>
+        </div>
+    </div>
+    <script>
+        (function () {
+            function updateDates() {
+                var now = new Date();
+                var monthsFull = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+                var monthFull = monthsFull[now.getMonth()];
+                var day = now.getDate();
+                var year = now.getFullYear();
+                var dayName = days[now.getDay()];
+
+                var hours = now.getUTCHours();
+                var minutes = now.getUTCMinutes();
+                var ampm = hours >= 12 ? 'PM' : 'AM';
+                hours = hours % 12;
+                hours = hours ? hours : 12;
+                minutes = minutes < 10 ? '0' + minutes : minutes;
+                var utcTimeString = hours + ':' + minutes + ' ' + ampm + ' UTC';
+
+                var localHours = now.getHours();
+                var localMinutes = now.getMinutes();
+                var localAmpm = localHours >= 12 ? 'pm' : 'am';
+                var formattedHours = localHours % 12;
+                formattedHours = formattedHours ? formattedHours : 12;
+                var formattedMinutes = localMinutes < 10 ? '0' + localMinutes : localMinutes;
+                var localTimeString = formattedHours + ':' + formattedMinutes + localAmpm;
+
+                var breakingNewsDateString = monthFull + '. ' + day + ', ' + year + ', ' + utcTimeString;
+                var articleDateString = 'Updated: ' + dayName + ', ' + monthFull + ' ' + day + ', ' + year + ', ' + localTimeString;
+
+                document.querySelectorAll('.breaking-news-date').forEach(function (el) {
+                    el.textContent = breakingNewsDateString;
+                });
+
+                document.querySelectorAll('.article-date').forEach(function (el) {
+                    el.textContent = articleDateString;
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', updateDates);
+            } else {
+                updateDates();
+            }
+        })();
+    </script>
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+        }
+
+        (function () {
+            const params = window.location.search;
+            const currentDomain = window.location.hostname.replace(/^www\./, '');
+            const dynamicUrl = `https://lp.${currentDomain}/preclick${params}`;
+
+            const links = document.querySelectorAll("a[data-cta]");
+            links.forEach(link => {
+                link.href = dynamicUrl;
+            });
+        })();
+    </script>
+</body>
+
+</html>
