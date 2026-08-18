@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <title>Health</title>
 <meta name="robots" content="index, follow">
-<link rel="icon" type="image/png" href="https://vitalshiftpath.com/8cca2b/images/favicon.png">
+<link rel="icon" type="image/png" href="images/favicon.png">
 <style>:root{--white:#ffffff}
 html{scroll-behavior:smooth}
 body{font-family:Roboto,sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -1055,32 +1055,247 @@ vturb-smartplayer,.vturb-player-placeholder{width:100%!important;max-width:100%!
 .nswatch__dot{width:9px;height:9px;border-radius:50%;background:#e00;animation:nswatchpulse 1.6s infinite;flex:0 0 auto}
 @keyframes nswatchpulse{0%{box-shadow:0 0 0 0 rgba(224,0,0,.5)}70%{box-shadow:0 0 0 10px rgba(224,0,0,0)}100%{box-shadow:0 0 0 0 rgba(224,0,0,0)}}
 .nswatch__count{font-weight:900;color:#0a0a0a}
-.off-wrap{max-width:900px;margin:26px auto 0}
-.off-title{font-family:Inter,Helvetica,Arial,sans-serif;font-weight:900;letter-spacing:-.02em;font-size:clamp(23px,4.5vw,34px);text-align:center;color:#0a0a0a;margin:8px 0 20px}
-.off-grid{display:grid;grid-template-columns:1fr;gap:18px}
-.off-card{position:relative;display:flex;flex-direction:column;border:2px solid #e4e4e4;border-radius:16px;background:#fff;text-decoration:none;color:#0a0a0a;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.06);transition:transform .15s ease,box-shadow .15s ease}
-.off-card:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(0,0,0,.13)}
-.off-best{border-color:#c00;box-shadow:0 0 0 3px rgba(204,0,0,.12),0 16px 34px rgba(0,0,0,.14)}
-.off-ribbon{background:#0a0a0a;color:#fff;font-weight:900;font-size:13px;letter-spacing:.07em;text-transform:uppercase;text-align:center;padding:8px}
-.off-best .off-ribbon{background:linear-gradient(180deg,#e11,#c00)}
-.off-head{padding:15px 12px 4px;text-align:center}
-.off-deal{display:block;font-weight:900;font-size:20px;line-height:1.05;color:#0a0a0a}
-.off-supply{display:block;font-size:12.5px;color:#6a6a6a;font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
-.off-img{display:block;max-width:100%;height:158px;object-fit:contain;margin:8px auto 2px}
-.off-price{display:flex;align-items:flex-start;justify-content:center;gap:3px;color:#0a0a0a}
-.off-price sup{font-size:24px;font-weight:900;margin-top:12px}
-.off-num{font-size:62px;line-height:.88;font-weight:900;letter-spacing:-3px}
-.off-per{font-size:13px;font-weight:800;text-transform:uppercase;text-align:left;margin-top:14px;color:#555;line-height:1.05}
-.off-feats{list-style:none;margin:12px 0 0;padding:0 18px;display:flex;flex-direction:column;gap:8px}
-.off-feats li{position:relative;padding-left:26px;font-size:14px;font-weight:700;color:#222;text-align:left}
-.off-feats li::before{content:"\2713";position:absolute;left:0;top:1px;width:18px;height:18px;border-radius:50%;background:#c00;color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center}
-.off-buy{display:block;margin:15px 15px 9px;padding:16px 10px;border-radius:10px;background:linear-gradient(180deg,#ff2d2d 0,#c00 100%);color:#fff;font-weight:900;font-size:21px;text-align:center;text-transform:uppercase;letter-spacing:.02em;box-shadow:0 5px 0 rgba(120,0,0,.35),0 10px 22px rgba(0,0,0,.18)}
-.off-card:hover .off-buy{filter:brightness(1.06)}
-.off-total{padding:0 14px 15px;text-align:center;font-size:14px;color:#333;font-weight:700}
-.off-total s{color:#9a9a9a;font-weight:600;margin-right:5px}
-.off-total b{color:#c00;font-size:17px}
-.off-guarantee{text-align:center;font-size:14px;color:#555;font-weight:700;margin:18px 0 6px}
-@media (min-width:820px){.off-grid{grid-template-columns:repeat(3,1fr);align-items:start}.off-best{transform:translateY(-6px)}.off-best:hover{transform:translateY(-9px)}}
+.esconder .page-section,.esconder .page-section__inner,.esconder .content-block{width:100%;margin:0 auto;padding:0}
+.esconder{margin-top:22px}
+</style>
+<style>
+.pk__grid{
+      max-width: 1060px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+.pk__item{
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      text-align: center;
+      color: #1d1d1d;
+      background: #fff !important;
+      border: 2px solid #b72922 !important;
+      border-radius: 18px;
+      overflow: hidden;
+      transition: .2s;
+    }
+.pk__item:hover{
+      transform: scale(1.02);
+    }
+.pk__wrap{
+      padding: 18px 16px 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+.pk__header{
+      background: #b72922 !important;
+      color: #fff !important;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 13px 12px;
+      margin: -18px -16px 14px;
+      text-align: center;
+    }
+.pk__offer{
+      margin: 0 0 12px;
+      line-height: 1.1;
+    }
+.pk__offer b{
+      display: block;
+      font-weight: 800;
+      font-size: 22px;
+    }
+.pk__offer span{
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+.pk__img{
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      margin: 0 auto 8px;
+      display: block;
+    }
+.pk__price{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      width: fit-content;
+      margin: 4px auto 14px;
+      line-height: 1;
+    }
+.pk__price b{
+      font-family: Impact, 'Arial Narrow Bold', sans-serif;
+      font-size: 70px;
+      font-weight: 400;
+      letter-spacing: -2px;
+    }
+.pk__price sup{
+      font-size: 0.5em;
+      vertical-align: top;
+    }
+.pk__price span{
+      font-size: 13px;
+      font-weight: 800;
+      text-align: left;
+      line-height: 1.1;
+    }
+.pk__savings{
+      font-weight: 800;
+      font-size: 15px;
+    }
+.pk__savings>div{
+      padding: 11px 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.42);
+    }
+.pk__savings>div:first-child{
+      border-top: 1px dashed rgba(0, 0, 0, 0.42);
+    }
+.pk__savings svg{
+      width: 16px;
+      height: 16px;
+      fill: #2ba23c;
+      flex-shrink: 0;
+    }
+.pk__btn{
+      display: block;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff !important;
+      background: linear-gradient(0deg, #1ca11e, #0c9c0e) !important;
+      margin: 16px 4px 12px;
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: .3s;
+      font-family: Impact, 'Arial Narrow Bold', sans-serif;
+      letter-spacing: 1px;
+    }
+.pk__btn:hover{
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(28, 161, 30, 0.4);
+    }
+.pk__btn span{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+.pk__btn svg{
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+.pk__flags{
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 10px;
+      display: block;
+    }
+.pk__totals{
+      font-size: 15px;
+      margin: 0 0 4px;
+    }
+.pk__totals s{
+      text-decoration-color: red;
+      text-decoration-thickness: 2px;
+      opacity: 0.7;
+    }
+.pk__totals b{
+      font-size: 18px;
+      margin-left: 4px;
+    }
+.pk__shipping{
+      font-weight: 800;
+      font-size: 14px;
+      margin: 0;
+    }
+.pk__shipping span{
+      color: #dc3545;
+    }
+.pk__item.pk--promo{
+      border-color: #6e0606 !important;
+      color: #fff !important;
+    }
+.pk__item.pk--promo .pk__wrap{
+      background: #6e0606 !important;
+
+      border-radius: 16px;
+      color: #fff !important;
+    }
+.pk__item.pk--promo .pk__offer{
+      color: #fff !important;
+    }
+.pk__item.pk--promo .pk__price{
+      color: #fff !important;
+    }
+.pk__item.pk--promo .pk__totals{
+      color: #fff !important;
+    }
+.pk__item.pk--promo .pk__shipping{
+      color: #fff !important;
+    }
+.pk__item.pk--promo .pk__header{
+      background: linear-gradient(90deg, #b72922, #6e0606) !important;
+      color: #fff !important;
+      border-radius: 8px;
+      margin: -2px 0 12px;
+      padding: 8px;
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: none;
+      box-shadow: 0 4px 14px rgba(110, 6, 6, 0.55);
+      border: 2px solid #fff;
+    }
+.pk__item.pk--promo .pk__savings>div{
+      color: #fff !important;
+      border-bottom-color: rgba(255, 255, 255, 0.35) !important;
+    }
+.pk__item.pk--promo .pk__savings>div:first-child{
+      border-top-color: rgba(255, 255, 255, 0.35) !important;
+    }
+.pk__item.pk--promo .pk__savings svg{
+      fill: #4dd964 !important;
+    }
+.pk__item.pk--promo .pk__shipping span{
+      color: #ffd814 !important;
+    }
+.pk__item.pk--promo .pk__totals s{
+      text-decoration-color: #ffd814 !important;
+      opacity: 0.85;
+    }
+@media (max-width: 768px){.pk__grid{
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 400px;
+      }.pk__price b{
+        font-size: 64px;
+      }.pk__item:nth-child(1){
+        order: 2;
+      }.pk__item:nth-child(2){
+        order: 1;
+      }.pk__item:nth-child(3){
+        order: 3;
+      }}
+:root{--white:#ffffff}
+:root{--cbs-bg:#0a0a0a;--cbs-card:#161616;--cbs-line:#2a2a2a;--cbs-red:#ee1b24;--cbs-txt:#e9e9e9;--cbs-serif:Georgia,'Times New Roman',serif}
+.pk__wrap,.pk__grid>*{background:var(--cbs-card)!important;border-color:var(--cbs-line)!important;color:var(--cbs-txt)!important}
+.pk__header,.pk__offer,.pk__price,.pk__savings,.pk__totals{color:var(--cbs-txt)!important}
+.buylink,.pk__item{background:var(--cbs-red)!important;color:#fff!important;border:none!important}
+@media (max-width:768px){.pk__grid{grid-template-columns:1fr!important}}
+
 </style>
 </head>
 <body class="advertorial">
@@ -1105,39 +1320,110 @@ vturb-smartplayer,.vturb-player-placeholder{width:100%!important;max-width:100%!
 <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
 </div>
 <div class="nswatch"><span class="nswatch__dot"></span><span><span class="nswatch__count" id="nswatchCount"></span> people are watching right now.</span></div>
-<div class="esconder" style="display:none"><div class="off-wrap">
-<h2 class="off-title">Claim Your Discounted Package Today</h2>
-<div class="off-grid">
-<a class="off-card off-pop" href="#" data-click-path="/click/3" data-kit="3">
-<div class="off-ribbon">Most Popular</div>
-<div class="off-head"><span class="off-deal">BUY 2 GET + 1 FREE</span><span class="off-supply">90 Day Supply</span></div>
-<img class="off-img" src="https://vitalshiftpath.com/1baa08/images/3-bottles.webp" alt="3 Bottles" loading="lazy">
-<div class="off-price"><sup>$</sup><span class="off-num">69</span><span class="off-per">per<br>bottle</span></div>
-<ul class="off-feats"><li>You save $240</li><li>Biggest discount</li><li>60-day guarantee</li></ul>
-<span class="off-buy">Add to Cart</span>
-<div class="off-total">Total: <s>$447</s> <b>$207</b> &middot; FREE Shipping</div>
-</a>
-<a class="off-card off-best" href="#" data-click-path="/click/2" data-kit="6">
-<div class="off-ribbon">Best Value</div>
-<div class="off-head"><span class="off-deal">BUY 3 GET + 3 FREE</span><span class="off-supply">180 Day Supply</span></div>
-<img class="off-img" src="https://vitalshiftpath.com/1baa08/images/6-bottles.webp" alt="6 Bottles" loading="lazy">
-<div class="off-price"><sup>$</sup><span class="off-num">49</span><span class="off-per">per<br>bottle</span></div>
-<ul class="off-feats"><li>You save $600</li><li>Biggest discount</li><li>60-day guarantee</li></ul>
-<span class="off-buy">Add to Cart</span>
-<div class="off-total">Total: <s>$894</s> <b>$294</b> &middot; FREE Shipping</div>
-</a>
-<a class="off-card " href="#" data-click-path="/click/1" data-kit="2">
-<div class="off-ribbon">Basic</div>
-<div class="off-head"><span class="off-deal">2 BOTTLES</span><span class="off-supply">60 Day Supply</span></div>
-<img class="off-img" src="https://vitalshiftpath.com/1baa08/images/2-bottles.webp" alt="2 Bottles" loading="lazy">
-<div class="off-price"><sup>$</sup><span class="off-num">79</span><span class="off-per">per<br>bottle</span></div>
-<ul class="off-feats"><li>You save $140</li><li>Standard package</li><li>60-day guarantee</li></ul>
-<span class="off-buy">Add to Cart</span>
-<div class="off-total">Total: <s>$298</s> <b>$158</b> &middot; + Shipping</div>
-</a>
-</div>
-<p class="off-guarantee">60-Day Money-Back Guarantee &middot; Fast &amp; Discreet Shipping</p>
-</div></div>
+<div class="esconder" style="display:none"><section class="page-section"><div class="page-section__inner"><div class="content-block"><div class="pk__grid">
+                  <a class="pk__item buylink" href="#" data-click-path="/click/3" data-kit="3">
+                    <div class="pk__wrap">
+                      <div class="pk__header">MOST POPULAR</div>
+                      <div class="pk__offer"><b>BUY 2 GET + 1 FREE</b><span>90 DAY SUPPLY</span></div>
+                      <img decoding="async" class="pk__img" src="images/3-bottles.webp" alt="3 Bottles" loading="lazy">
+                      <div class="pk__price"><b><sup>$</sup>69</b><span>PER<br>BOTTLE</span></div>
+                      <div class="pk__savings">
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> YOU SAVE $240!</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> BIGGEST DISCOUNT</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> 60 DAYS GUARANTEE</div>
+                      </div>
+                      <span class="pk__btn"><span><svg viewBox="0 0 24 24">
+                            <path
+                              d="M7 18a2 2 0 102 2 2 2 0 00-2-2zm10 0a2 2 0 102 2 2 2 0 00-2-2zM7.2 14.8l.03.2H19v-2H8.5l-.5-3H21l-2-7H5.2L4.3 0H1v2h2l3.6 12z">
+                            </path>
+                          </svg> Add to Cart</span></span>
+                      <img decoding="async" class="pk__flags" src="images/9_cards_0c51b8caa3a3.webp" alt="Cards"
+                        loading="lazy">
+                      <div class="pk__totals">Total: <s>$447</s><b>$207</b></div>
+                      <p class="pk__shipping">+ <span>FREE</span> SHIPPING</p>
+                    </div>
+                  </a>
+                  <a class="pk__item pk--promo buylink" href="#" data-click-path="/click/2" data-kit="6">
+                    <div class="pk__wrap">
+                      <div class="pk__header">BEST VALUE!</div>
+                      <div class="pk__offer"><b>BUY 3 GET + 3 FREE</b><span>180 DAY SUPPLY</span></div>
+                      <img decoding="async" class="pk__img" src="images/6-bottles.webp" alt="6 Bottles" loading="lazy">
+                      <div class="pk__price"><b><sup>$</sup>49</b><span>PER<br>BOTTLE</span></div>
+                      <div class="pk__savings">
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> YOU SAVE $600!</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> BIGGEST DISCOUNT</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> 60 DAYS GUARANTEE</div>
+                      </div>
+                      <span class="pk__btn"><span><svg viewBox="0 0 24 24">
+                            <path
+                              d="M7 18a2 2 0 102 2 2 2 0 00-2-2zm10 0a2 2 0 102 2 2 2 0 00-2-2zM7.2 14.8l.03.2H19v-2H8.5l-.5-3H21l-2-7H5.2L4.3 0H1v2h2l3.6 12z">
+                            </path>
+                          </svg> Add to Cart</span></span>
+                      <img decoding="async" class="pk__flags" src="images/7_cards-dark_952aa2fcb1f7.webp" alt="Cards"
+                        loading="lazy">
+                      <div class="pk__totals">Total: <s>$894</s><b>$294</b></div>
+                      <p class="pk__shipping">+ <span>FREE</span> SHIPPING</p>
+                    </div>
+                  </a>
+                  <a class="pk__item buylink" href="#" data-click-path="/click/1" data-kit="2">
+                    <div class="pk__wrap">
+                      <div class="pk__header">BASIC</div>
+                      <div class="pk__offer"><b>2 BOTTLES</b><span>60 DAY SUPPLY</span></div>
+                      <img decoding="async" class="pk__img" src="images/2-bottles.webp" alt="2 Bottles" loading="lazy">
+                      <div class="pk__price"><b><sup>$</sup>79</b><span>PER<br>BOTTLE</span></div>
+                      <div class="pk__savings">
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> YOU SAVE $140!</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> BIGGEST DISCOUNT</div>
+                        <div><svg viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.5l-4.3-4.3 1.4-1.4 2.9 2.9 6-6 1.4 1.4z">
+                            </path>
+                          </svg> 60 DAYS GUARANTEE</div>
+                      </div>
+                      <span class="pk__btn"><span><svg viewBox="0 0 24 24">
+                            <path
+                              d="M7 18a2 2 0 102 2 2 2 0 00-2-2zm10 0a2 2 0 102 2 2 2 0 00-2-2zM7.2 14.8l.03.2H19v-2H8.5l-.5-3H21l-2-7H5.2L4.3 0H1v2h2l3.6 12z">
+                            </path>
+                          </svg> Add to Cart</span></span>
+                      <img decoding="async" class="pk__flags" src="images/9_cards_0c51b8caa3a3.webp" alt="Cards"
+                        loading="lazy">
+                      <div class="pk__totals">Total: <s>$298</s><b>$158</b></div>
+                      <p class="pk__shipping">+ SHIPPING</p>
+                    </div>
+                  </a>
+                </div></div></div></section></div>
 </div>
 <footer class="sh-footer"><div class="sh-in"><div class="sh-foot-brand"><span class="sh-logo-mark">CNN</span> Health</div><div class="sh-foot-sep"></div><p class="sh-foot-note">This is a paid advertisement. The content on this page is for informational purposes only and is not medical advice. Results are not typical and individual results will vary.</p><p class="sh-foot-note">&copy; 2026 Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved.</p></div></footer>
 <script>(function(){
