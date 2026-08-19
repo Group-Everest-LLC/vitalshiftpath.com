@@ -1298,120 +1298,156 @@ vturb-smartplayer,.vturb-player-placeholder{width:100%!important;max-width:100%!
 
 </style>
 <style>
-.ns1__reviews-bg{
-      background: #fff;
-      padding: 50px 20px 30px;
+.fbc2{
+      box-sizing: border-box;
     }
-.ns1__reviews{
-      max-width: 700px;
+.fbc2 *,
+    .fbc2 *::before,
+    .fbc2 *::after{
+      box-sizing: border-box;
+    }
+.fbc2{
+      width: 100%;
+      max-width: 1100px;
       margin: 0 auto;
+      padding: 24px 18px;
+      background: #fff;
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      color: #050505;
     }
-.ns1__reviews-title{
+.fbc2__header{
       font-weight: 700;
-      font-size: 30px;
-      text-align: center;
-      color: #b72922;
-      margin: 0 0 10px;
-      line-height: 1.25;
+      font-size: 17px;
+      margin: 0 0 18px;
     }
-.ns1__reviews-subtitle{
-      font-weight: 700;
-      font-size: 22px;
-      text-align: center;
-      color: #1a1a1a;
-      margin: 0 0 28px;
+.fbc2__box{
+      border: 1px solid #e4e6eb;
+      border-radius: 14px;
+      padding: 18px 16px;
     }
-.ns1__reviews-label{
-      font-weight: 700;
-      font-size: 14px;
-      color: #000;
-      margin: 0 0 12px;
-    }
-.ns1__review{
-      border-bottom: 1px solid #e5e5e5;
-      padding: 20px 0 22px;
-    }
-.ns1__review:last-child{
-      border-bottom: none;
-    }
-.ns1__rv-head{
+.fbc2__c{
       display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 4px;
+      gap: 8px;
+      margin-bottom: 14px;
     }
-.ns1__rv-avatar{
-      width: 44px;
-      height: 44px;
+.fbc2__c--reply{
+      margin-left: 48px;
+    }
+.fbc2__avatar{
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       overflow: hidden;
-      background: #e5e5e5;
       flex-shrink: 0;
+      background: #e4e6eb;
     }
-.ns1__rv-avatar img{
+.fbc2__avatar img{
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
-.ns1__rv-name{
-      font-weight: 700;
-      font-size: 14px;
-      color: #000;
+.fbc2__body{
+      flex: 1;
+      min-width: 0;
     }
-.ns1__rv-loc{
-      font-weight: 400;
-      font-size: 13px;
-      color: #777;
+.fbc2__bubble{
+      position: relative;
+      background: #f0f2f5;
+      border-radius: 18px;
+      padding: 9px 16px 10px;
+      display: inline-block;
+      max-width: 100%;
     }
-.ns1__rv-stars{
-      display: inline-flex;
-      gap: 2px;
-      margin: 2px 0 4px;
-    }
-.ns1__rv-stars svg{
-      width: 15px;
-      height: 15px;
-      fill: #f5a623;
-    }
-.ns1__rv-purchased{
-      font-weight: 700;
-      font-size: 12px;
-      color: #b72922;
-      margin: 0 0 8px;
-    }
-.ns1__rv-body{
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 1.55;
-      color: #555;
-      margin: 0 0 10px;
-    }
-.ns1__rv-helpful{
-      font-size: 13px;
-      color: #888;
-      margin: 0 0 6px;
-    }
-.ns1__rv-actions{
-      display: flex;
-      gap: 16px;
-      font-size: 12px;
+.fbc2__name{
       font-weight: 600;
-      color: #777;
+      font-size: 13px;
+      color: #385898;
+      line-height: 1.3;
+      margin-bottom: 2px;
     }
-@media (max-width: 768px){.ns1__reviews-bg{
-        padding: 35px 16px 25px;
-      }.ns1__reviews-title{
-        font-size: 22px;
-      }.ns1__reviews-subtitle{
-        font-size: 18px;
-      }.ns1__rv-body{
-        font-size: 13px;
+.fbc2__text{
+      font-size: 15px;
+      line-height: 1.4;
+      color: #050505;
+    }
+.fbc2__reactions{
+      position: absolute;
+      right: 0px;
+      background: #fff;
+      border-radius: 99px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      padding: 1px 6px 1px 2px;
+    }
+.fbc2__react-icon{
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+.fbc2__react-icon svg{
+      width: 11px;
+      height: 11px;
+      fill: #fff;
+    }
+.fbc2__react-like{
+      background: #1877f2;
+    }
+.fbc2__react-love{
+      background: #f33e58;
+      margin-left: -6px;
+    }
+.fbc2__react-count{
+      font-size: 13px;
+      color: #65676b;
+      font-weight: 500;
+      margin-left: 3px;
+    }
+.fbc2__meta{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 6px 0 0 16px;
+      font-size: 12px;
+      color: #65676b;
+      font-weight: 600;
+    }
+.fbc2__meta .act{
+      cursor: pointer;
+    }
+.fbc2__meta .act:hover{
+      text-decoration: underline;
+    }
+.fbc2__meta .time{
+      font-weight: 400;
+    }
+.fbc2__footer{
+      text-align: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: #050505;
+      margin-top: 18px;
+    }
+@media (max-width: 600px){.fbc2{
+        padding: 16px 12px;
+      }.fbc2__c--reply{
+        margin-left: 28px;
+      }.fbc2__avatar{
+        width: 34px;
+        height: 34px;
+      }.fbc2__text{
+        font-size: 14px;
       }}
 
 .sh-headline{font-size:27px!important;line-height:1.16!important}
 @media (min-width:768px){.sh-headline{font-size:32px!important}}
-.esconder .ns1__reviews-bg{margin:24px auto 0}
+.esconder .fbc2{margin:24px auto 0}
 </style>
 </head>
 <body class="advertorial">
@@ -1540,128 +1576,241 @@ vturb-smartplayer,.vturb-player-placeholder{width:100%!important;max-width:100%!
                     </div>
                   </a>
                 </div></div></div></section></div>
-<div class="esconder" style="display:none"><div class="ns1__reviews-bg">
-                  <div class="ns1__reviews">
-                    <h2 class="ns1__reviews-title">What People Are Saying About CardioFlush?</h2>
-                    <p class="ns1__reviews-subtitle">Real Life-Changing Results!</p>
-                    <p class="ns1__reviews-label">Top reviews from the United States</p>
-                    <div class="ns1__review">
-                      <div class="ns1__rv-head">
-                        <div class="ns1__rv-avatar"><img decoding="async" src="images/1_QRhrvdDn2yO_CgcJFbghDg.jpg"
-                            alt="Lisa M." loading="lazy"></div>
-                        <div><span class="ns1__rv-name">Lisa M.</span> <span class="ns1__rv-loc">– Montclair, NJ</span>
-                        </div>
-                      </div>
-                      <div class="ns1__rv-stars"><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg></div>
-                      <p class="ns1__rv-purchased">Purchased CardioFlush 6 Bottles Package</p>
-                      <p class="ns1__rv-body">For the last 5 years I lived terrified of every blood pressure reading —
-                        158/96 at every doctor visit, two different meds, constant headaches. After just 4 weeks on
-                        CardioFlush my morning readings dropped to 122/79. My cardiologist couldn't believe it. He's already
-                        started weaning me off one of the meds. I haven't felt this clear-headed in a decade.</p>
-                      <p class="ns1__rv-helpful">42 people found this helpful</p>
-                      <div class="ns1__rv-actions"><span>Helpful</span><span>Share</span><span>Report</span></div>
-                    </div>
-                    <div class="ns1__review">
-                      <div class="ns1__rv-head">
-                        <div class="ns1__rv-avatar"><img decoding="async"
-                            src="images/505732186_10228909505707682_2186691460116083032_n.jpg" alt="Tamika W."
-                            loading="lazy"></div>
-                        <div><span class="ns1__rv-name">Tamika W.</span> <span class="ns1__rv-loc">– Atlanta, GA</span>
-                        </div>
-                      </div>
-                      <div class="ns1__rv-stars"><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg></div>
-                      <p class="ns1__rv-purchased">Purchased CardioFlush 6 Bottles Package</p>
-                      <p class="ns1__rv-body">After my second son was born my pressure spiked to 165/102 and never came
-                        back
-                        down. 4 years on Losartan, Amlodipine, and Lisinopril — none of them stuck. A coworker swore by
-                        CardioFlush so I gave it one last shot. In just 30 days I went from 165/102 down to 124/81. Last
-                        week
-                        my doctor cleared me off two of the three meds. I cried in the parking lot.</p>
-                      <p class="ns1__rv-helpful">38 people found this helpful</p>
-                      <div class="ns1__rv-actions"><span>Helpful</span><span>Share</span><span>Report</span></div>
-                    </div>
-                    <div class="ns1__review">
-                      <div class="ns1__rv-head">
-                        <div class="ns1__rv-avatar"><img decoding="async" src="images/images-65.jpeg" alt="Margaret D."
-                            loading="lazy"></div>
-                        <div><span class="ns1__rv-name">Margaret D.</span> <span class="ns1__rv-loc">– Phoenix,
-                            AZ</span>
-                        </div>
-                      </div>
-                      <div class="ns1__rv-stars"><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg></div>
-                      <p class="ns1__rv-purchased">Purchased CardioFlush 6 Bottles Package</p>
-                      <p class="ns1__rv-body">At 62, I had given up. I've spent thousands over the years — every
-                        "natural"
-                        pressure pill on Amazon, every supplement my pharmacist suggested. Every single one was useless.
-                        My
-                        daughter begged me to try CardioFlush and I honestly bought it just to make her stop nagging. 3
-                        weeks
-                        later my pressure is at 128/82 and my headaches are gone. I keep waiting for the catch but there
-                        isn't one.</p>
-                      <p class="ns1__rv-helpful">29 people found this helpful</p>
-                      <div class="ns1__rv-actions"><span>Helpful</span><span>Share</span><span>Report</span></div>
-                    </div>
-                    <div class="ns1__review">
-                      <div class="ns1__rv-head">
-                        <div class="ns1__rv-avatar"><img decoding="async" src="images/images-66.jpeg" alt="Michael J."
-                            loading="lazy"></div>
-                        <div><span class="ns1__rv-name">Michael J.</span> <span class="ns1__rv-loc">– Austin, TX</span>
-                        </div>
-                      </div>
-                      <div class="ns1__rv-stars"><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg><svg viewBox="0 0 24 24">
-                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon>
-                        </svg></div>
-                      <p class="ns1__rv-purchased">Purchased CardioFlush 6 Bottles Package</p>
-                      <p class="ns1__rv-body">Look, I'm a hard skeptic. I've taken pressure meds for 12 years and every
-                        doctor said it was a "lifetime thing." My wife stumbled on CardioFlush and showed me. I told her
-                        flat
-                        out it was probably a scam. She bought it anyway. 30 days in I went from 172/108 to 119/78 — and
-                        that's WITHOUT increasing my meds. My doctor literally asked what protocol I was on. First time
-                        I've
-                        felt like myself in over a decade.</p>
-                      <p class="ns1__rv-helpful">61 people found this helpful</p>
-                      <div class="ns1__rv-actions"><span>Helpful</span><span>Share</span><span>Report</span></div>
+<div class="esconder" style="display:none"><div class="fbc2">
+            <div class="fbc2__header">36,158 Comments</div>
+            <div class="fbc2__box">
+              <div class="fbc2__c">
+                <div class="fbc2__avatar"><img decoding="async" src="images/80.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Sophie Robinson</div>
+                    <div class="fbc2__text">Wait what's the actual ritual? Do I need to watch the whole thing?</div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">21</span>
                     </div>
                   </div>
-                </div></div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">2h</span></div>
+                </div>
+              </div>
+              <div class="fbc2__c fbc2__c--reply">
+                <div class="fbc2__avatar"><img decoding="async" src="images/81.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Victoria Carter</div>
+                    <div class="fbc2__text">yeah Linda breaks it down early on. Worth watching tbh</div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">18</span>
+                    </div>
+                  </div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">1h</span></div>
+                </div>
+              </div>
+              <div class="fbc2__c">
+                <div class="fbc2__avatar"><img decoding="async" src="images/82.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Lisa G.</div>
+                    <div class="fbc2__text">Ngl I only watched cause of the CNN story but the arterial cement thing
+                      actually makes sense when she breaks down the science. Def gonna try it <img draggable="false"
+                        role="img" class="emoji" alt="👀" src="images/1f440.svg"></div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">46</span>
+                    </div>
+                  </div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">1h</span></div>
+                </div>
+              </div>
+              <div class="fbc2__c">
+                <div class="fbc2__avatar"><img decoding="async" src="images/83.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Madison Scott</div>
+                    <div class="fbc2__text">3 weeks in and my cardiologist asked if I changed meds <img
+                        draggable="false" role="img" class="emoji" alt="😂" src="images/1f602.svg"> nope just the
+                      arterial flush apparently</div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">63</span>
+                    </div>
+                  </div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">55 min</span></div>
+                </div>
+              </div>
+              <div class="fbc2__c">
+                <div class="fbc2__avatar"><img decoding="async" src="images/84.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Charlotte Williams</div>
+                    <div class="fbc2__text">Ok I almost scrolled past this but I'm glad I didn't. Started the arterial
+                      flush 2 weeks ago and my morning readings are already down. Not saying it's magic but something
+                      is
+                      definitely working</div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">58</span>
+                    </div>
+                  </div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">40 min</span></div>
+                </div>
+              </div>
+              <div class="fbc2__c">
+                <div class="fbc2__avatar"><img decoding="async" src="images/85.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Daisy Collins</div>
+                    <div class="fbc2__text">Is this actually legit or just another internet thing??</div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">14</span>
+                    </div>
+                  </div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">32 min</span></div>
+                </div>
+              </div>
+              <div class="fbc2__c fbc2__c--reply">
+                <div class="fbc2__avatar"><img decoding="async" src="images/86.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Emily Lewis</div>
+                    <div class="fbc2__text">I literally said the same thing lol. Try it for a week and see. My
+                      headaches
+                      went away first and now my pressure is at 122/80 every morning. Hadn't seen numbers like that in
+                      years</div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">35</span>
+                    </div>
+                  </div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">28 min</span></div>
+                </div>
+              </div>
+              <div class="fbc2__c">
+                <div class="fbc2__avatar"><img decoding="async" src="images/87.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Olivia Martinez</div>
+                    <div class="fbc2__text">I've tried Losartan, Lisinopril, Amlodipine… this is the first time my
+                      pressure actually stays down. The chest tightness just kinda stopped? Idk how to explain</div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">49</span>
+                    </div>
+                  </div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">20 min</span></div>
+                </div>
+              </div>
+              <div class="fbc2__c">
+                <div class="fbc2__avatar"><img decoding="async" src="images/88.png" alt=""></div>
+                <div class="fbc2__body">
+                  <div class="fbc2__bubble">
+                    <div class="fbc2__name">Emma Clark</div>
+                    <div class="fbc2__text">2 months in. went from 178/108 down to 121/79. off losartan too. i'm
+                      honestly confused how this isn't bigger news <img draggable="false" role="img" class="emoji"
+                        alt="🤷‍♀️" src="images/1f937-200d-2640-fe0f.svg"></div>
+                    <div class="fbc2__reactions">
+                      <span class="fbc2__react-icon fbc2__react-like"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M2 9.5h4v12H2zM22 11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-icon fbc2__react-love"><svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                          </path>
+                        </svg></span>
+                      <span class="fbc2__react-count">72</span>
+                    </div>
+                  </div>
+                  <div class="fbc2__meta"><span class="act">Like</span><span class="act">Reply</span><span
+                      class="time">just now</span></div>
+                </div>
+              </div>
+              <div class="fbc2__footer">This post is no longer receiving comments!</div>
+            </div>
+          </div></div>
 </div>
 <footer class="sh-footer"><div class="sh-in"><div class="sh-foot-brand"><span class="sh-logo-mark">CNN</span> Health</div><div class="sh-foot-sep"></div><p class="sh-foot-note">This is a paid advertisement. The content on this page is for informational purposes only and is not medical advice. Results are not typical and individual results will vary.</p><p class="sh-foot-note">&copy; 2026 Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved.</p></div></footer>
 <script>(function(){
